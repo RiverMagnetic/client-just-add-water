@@ -1,1 +1,100 @@
 @import '~bootstrap/scss/bootstrap';
+body {
+    color: #333;
+    font-weight: 500;
+    margin: 0 auto;
+  }
+  header {
+    color: rgba(200, 200, 250, 0.9);
+    text-shadow: -1px 0 rgba(0,0,0,0.7), 0 1px rgba(0,0,0,0.7), 1px 0 rgba(0,0,0,0.7), 0 -1px rgba(0,0,0,0.7);
+    text-align: center;
+    background: url('https://scontent.fbos1-2.fna.fbcdn.net/v/t1.0-9/12243020_1745422325689409_7536393251872334651_n.png?_nc_cat=0&oh=6c6642723d3ecb7a33fcc1ef355db2e6&oe=5B6B6CF0');
+    background-size: cover;
+    font-family: 'Cardo',Georgia,"Times New Roman",serif;
+    line-height: 2em;
+  }
+  h1 {
+    font-size: 70px;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 26px;
+    font-weight: 500;
+    font-family: 'Cardo',Georgia,"Times New Roman",serif;
+    line-height: 1em;
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  a {
+    color: rgba(200, 200, 250, 0.8);
+    text-decoration: none;
+  }
+
+  img {
+    margin: 40px 0px 0px 0px;
+    border: 7px solid rgba(200, 200, 250, 0.9);
+    border-radius: 8px;
+  }
+  ul {
+    padding: 10px;
+    background: rgba(164, 243, 175, 0.173);
+  }
+  li {
+    display: inline;
+    padding: 4px 10px 4px 10px;
+    margin: 5px;
+    border: 1px solid rgba(200, 200, 250, 0.9);
+  }
+  article {
+    max-width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+    display: block;
+    word-wrap: break-word;
+  }
+  p { 
+    font-size: 100%;
+    color: #666;
+    font-family: "Open Sans",Arial,sans-serif;
+    line-height: 1.7em;
+  }
+  .daily-entry{
+    padding: 2px;
+    background: rgba(158, 218, 245, 0.173);
+    margin-bottom: 2px;
+  }
+  #progress-bar-listening-2018-8-22{
+    width:5%;
+  }
+  #progress-bar-listening-2018-8-23{
+    width:15%;
+  }
+  #progress-bar-overall-listening{
+    width:10%;
+  }
+  .status-today {
+    margin-bottom: 20px;
+  }
+  #progress-list-overall{
+    background-color: rgba(200, 200, 250, 0.9);
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+  }
+  @media (max-width: 625px) {
+    img {
+      margin: 0px 0px 0px 0px;
+      width: 96%;
+    }
+    h1 {
+      font-size: 35px;
+      padding: 5px;
+    }
+    li {
+      padding: 5px;
+      display: block;
+    }
+  }
