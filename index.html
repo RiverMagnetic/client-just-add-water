@@ -12,6 +12,20 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <!-- BEGIN SIGN IN -->
+      <div id="loginPage" align="center">
+        <form id="sign-in">
+          <h4 class="display-4">Sign In</h4>
+          <br>
+          <div class="form-group">
+            <input type="email" name="credentials[email]" value="" class="form-control" id="logInEmail" aria-describedby="emailHelp"
+              placeholder="email">
+            <input type="password" name="credentials[password]" value="" class="form-control" id="logInPassword" placeholder="Password">
+            <input type="submit" name="submit" class="btn btn-primary">
+          </div>
+        </form>
+        <input type="submit" value="create your account" class="btn btn-secondary" data-toggle="modal" data-target="#signUpModalCenter">
+      </div>
       <header>
         <!-- photo -->
         <img src="https://i.imgur.com/pYsXwJ0.jpg?1">
