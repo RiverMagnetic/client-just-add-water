@@ -55,17 +55,18 @@ const signOutFailure = function () {
 //     // $('#message').css('background-color', 'red')
 }
 
-// const changePasswordSuccess = function () {
+const changePasswordSuccess = function () {
 //     $('#message').text('Changed password successfully')
 //     // $('#message').css('background-color', 'green')
-//     // console.log('changePasswordSuccess ran and nothing was returned!')
+        console.log('changePasswordSuccess ran and nothing was returned!')
 //     $('#changePasswordModal').hide()
-// }
+}
 
-// const changePasswordFailure = function () {
+const changePasswordFailure = function () {
+    console.error('change-password failed, but changePasswordFailure ran!')
 //     $('#message').text('Incorrect old or new password')
 //     // $('#message').css('background-color', 'red')
-// }
+}
 
 module.exports = {
     signUpSuccess,
@@ -73,8 +74,7 @@ module.exports = {
     signInSuccess,
     signInFailure,
     signOutSuccess,
-    signOutFailure
-    // ,
-    // changePasswordSuccess,
-    // changePasswordFailure
+    signOutFailure,
+    changePasswordSuccess,
+    changePasswordFailure
 }
