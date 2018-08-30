@@ -45,22 +45,22 @@ const onSignOut = function (event) {
         .catch(authUi.signOutFailure)
 }
 
-// const onChangePassword = function (event) {
-//     event.preventDefault()
-//     // console.log('change password ran!')
+const onChangePassword = function (event) {
+    event.preventDefault()
+    // console.log('change password ran!')
 
-//     const data = getFormFields(this)
-//     authApi.changePassword(data)
-//         .then(authUi.changePasswordSuccess)
-//         .catch(authUi.changePasswordFailure)
-//     $('#change-password').trigger('reset')
-// }
+    const data = getFormFields(this)
+    authApi.changePassword(data)
+        .then(authUi.changePasswordSuccess)
+        .catch(authUi.changePasswordFailure)
+    $('#change-password').trigger('reset')
+}
 
 const addHandlers = () => {
     $('#sign-up').on('submit', onSignUp)
     $('#sign-in').on('submit', onSignIn)
     $('#sign-out').on('submit', onSignOut)
-    // $('#change-password').on('submit', onChangePassword)
+    $('#change-password').on('submit', onChangePassword)
 }
 
 module.exports = {
