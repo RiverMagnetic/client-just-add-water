@@ -25,7 +25,7 @@ const signInSuccess = function (data) {
     // $('#sign-in-modal').hide()
     // $('#sign-up-modal').hide()
     // $('#journal-entries-view').show()
-    // $('#sign-out-modal').show()
+    $('#logged-in-screen').show()
     // $('#change-password-modal').show()
 }
 
@@ -44,7 +44,7 @@ const signOutSuccess = function () {
     // $('#sign-in-modal').show()
     // $('#sign-up-modal').show()
     // $('#journal-entries-view').hide()
-    // $('#sign-out-modal').hide()
+    $('#logged-in-screen').hide()
     // $('#change-password-modal').hide()
     // $('#signOutModal').modal('hide')
 }
