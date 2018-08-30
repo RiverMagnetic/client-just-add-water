@@ -1,115 +1,193 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Just Add Water</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Just Add Water</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <!-- BEGIN SIGN IN -->
-      <div id="loginPage" align="center">
-        <form id="sign-in">
-          <h4 class="display-4">Sign In</h4>
-          <br>
-          <div class="form-group">
-            <input type="email" name="credentials[email]" value="" class="form-control" id="logInEmail" aria-describedby="emailHelp"
-              placeholder="email">
-            <input type="password" name="credentials[password]" value="" class="form-control" id="logInPassword" placeholder="Password">
-            <input type="submit" name="submit" class="btn btn-primary">
-          </div>
-        </form>
-        <input type="submit" value="create your account" class="btn btn-secondary" data-toggle="modal" data-target="#signUpModalCenter">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <!-- BEGIN LANDING SCREEN -->
+  <div id="landing-screen" align="center">
+    <form class="accounts" id="sign-in">
+      <h4 class="display-4">.Sign.In.</h4>
+      <br>
+      <div class="form-group">
+        <input type="email" name="credentials[email]" class="form-control" id="logInEmail" placeholder="email">
+        <input type="password" name="credentials[password]" class="form-control" id="logInPassword" placeholder="password">
+        <input type="submit" value="submit" class="btn btn-primary">
       </div>
-      <header>
-        <!-- photo -->
-        <img src="https://i.imgur.com/pYsXwJ0.jpg?1">
-        <section>
-          <h1>Just Add Water</h1>
-          <h2>(and maybe a little sunshine)</h2>
-          <h3></h3>
-        </section>
-        <nav>
-          <ul>
-            <li><a href="#">Write in Your Journal</a></li>
-            <li><a href="#">Note Your Progress</a></li>
-            <li><a href="#">About the App</a></li>
-          </ul>
-        </nav>
-      </header>
-      <section id ="progress-list-overall" class="row">
-          <div class="col-xs-12">
-            <h2>Current Personal Status</h2>
-          </div>
-          <div class="col-xs-5 mr-auto">
-            <div>
-                <p>
-                  <span class="progress-skill-title">Skill Goal: Listening</span>
-                </p>
-              <div class="progress">
-                <div id="progress-bar-overall-listening" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
+    </form>
+    <input type="submit" value="create your account" class="btn btn-secondary" data-toggle="modal" data-target="#signUpModalCenter">
+  </div>
+  <!--END LANDING SCREEN-->
+  <!-- BEGIN SIGN UP MODAL -->
+  <div class="modal fade" id="signUpModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">create your account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="accounts" id="sign-up">
+            <div class="form-group">
+              <input type="email" name="credentials[email]" class="form-control" aria-describedby="emailHelp"
+                placeholder="email">
+              <br>
+              <input type="password" name="credentials[password]" class="form-control" placeholder="password">
+              <input type="password" name="credentials[password_confirmation]" placeholder="confirm password" class="form-control">
             </div>
-          </div>
-        </section>
-        <section class="all-entries">
-          <section class="daily-entry">
-            <article>
-              <h2>August 23, 2018</h2>
-              <p>Trans and gender-nonconforming people face particular challenges. As a therapist I support clients experiencing these challenges, but this is not really me wrting. This is River putting words in my mouth in order to create content for River's capstone project, and is made up of bits of things relevant to River's life before General Assembly, as well as run-on sentences, misssspellingssss, bad grammer, random words, etc.</p>
-            </article>
-            <div class="col-md-5 mr-auto">
-              <div>
-                <p>
-                  <span class="progress-skill-title">Skill Goal: Listening</span>
-                </p>
-                <div class="progress status-today">
-                  <div id="progress-bar-listening-2018-8-23" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        <section class="daily-entry">
-          <article>
-            <h2>August 22, 2018</h2>
-            <p>In my last entry I left out a mood: <em>triste</em> or "sad". I also metioned that "estar" is used in conjuction with the location of people, animals and things. Let's expolre that a little. Al lado de next to, a la derecha de to the right, a la izquierda de to the left.</p>
-          </article>
-          <div class="col-md-5 mr-auto">
-            <div>
-              <p>
-                <span class="progress-skill-title">Skill Goal: Listening</span>
-              </p>
-              <div class="progress status-today">
-                <div id="progress-bar-listening-2018-8-22" class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="daily-entry"></section>
-          <article>
-            <h2>August 21, 2018</h2>
-            <p>"Estar" is also used in conjuction with the location of people, animals and things, but in this entry I'm going to focus on states of being/mood. Estoy un poco cansado/a. I am a little tired. Estoy muy contento/a. I am very happy. Aburrido/a bored, contento/a happy, nervioso/a nervous, frustrado/a frustrated. </p>
-          </article>
-          <div class="col-md-5 mr-auto">
-            <div >
-              <p>
-                <span class="progress-skill-title">Skill Goal: Listening</span>
-              </p>
-              <div class="progress status-today">
-                <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+            <input type="submit" id="create-account-button" value="submit" class="btn btn-primary" data-toggle="modal"
+              data-target="#signUpModalCenter">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END SIGN UP MODAL -->
+
+  <!-- BEGIN LOGGED-IN SCREEN -->
+  <div id="logged-in-screen">
+    <header>
+      <!-- photo -->
+      <img src="https://i.imgur.com/pYsXwJ0.jpg?1">
+      <section>
+        <h1>Just Add Water</h1>
+        <h2>(and maybe a little sunshine)</h2>
+        <h3></h3>
       </section>
-    </body>
+      <nav>
+        <ul>
+          <li><a href="#today">Write in Your Journal</a></li>
+          <!-- <li><a href="#">Note Your Progress</a></li> -->
+          <!-- <li><a href="#">About the App</a></li> -->
+          <li><a data-toggle="modal" href="#signOutModal">leave technology behind</a></li>
+          <li><a data-toggle="modal" href="#changePasswordModal">settings</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="progress-list-overall" class="row">
+      <div class="col-xs-12">
+        <h2>Current Personal Status</h2>
+      </div>
+      <div class="col-xs-5 mr-auto">
+        <div>
+          <p>
+            <span class="progress-skill-title">Skill Goal: Listening</span>
+          </p>
+          <div class="progress">
+            <div id="progress-bar-overall-listening" class="progress-bar progress-bar-info progress-bar-striped active"
+              role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="all-entries">
+      <section id="today" class="daily-entry">
+        <article>
+          <h2>August 23, 2018</h2>
+            <form id="todays-entry" class="border">
+              <div class="form">
+                <textarea form="todays-entry" name="journal-entry" placeholder="how are you feeling?"></textarea>
+                <input type="submit" class="long-button" value="save your journal entry">
+              </div>
+            </form>
+        </article>
+        <div class="col-md-5 mr-auto">
+          <div>
+            <p>
+              <span class="progress-skill-title">Skill Goal: Listening</span>
+            </p>
+            <div class="progress status-today">
+              <div id="progress-bar-listening-2018-8-23" class="progress-bar progress-bar-info progress-bar-striped active"
+                role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="daily-entry">
+        <article>
+          <h2>August 22, 2018</h2>
+          <p>In my last entry I left out a mood: <em>triste</em> or "sad". I also metioned that "estar" is used in
+            conjuction with the location of people, animals and things. Let's expolre that a little. Al lado de next
+            to, a la derecha de to the right, a la izquierda de to the left.</p>
+        </article>
+        <div class="col-md-5 mr-auto">
+          <div>
+            <p>
+              <span class="progress-skill-title">Skill Goal: Listening</span>
+            </p>
+            <div class="progress status-today">
+              <div id="progress-bar-listening-2018-8-22" class="progress-bar progress-bar-info progress-bar-striped active"
+                role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="daily-entry">
+        <article>
+          <h2>August 21, 2018</h2>
+          <p>"Estar" is also used in conjuction with the location of people, animals and things, but in this entry I'm
+            going to focus on states of being/mood. Estoy un poco cansado/a. I am a little tired. Estoy muy contento/a. I
+            am very happy. Aburrido/a bored, contento/a happy, nervioso/a nervous, frustrado/a frustrated. </p>
+        </article>
+        <div class="col-md-5 mr-auto">
+          <div>
+            <p>
+              <span class="progress-skill-title">Skill Goal: Listening</span>
+            </p>
+            <div class="progress status-today">
+              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- BEGIN CHANGE PWD MODAL -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <h4>Change your password</h4>
+          <form class="accounts" id="change-password">
+            <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
+            <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
+            <input type="submit" id="change-password-button" name="submit" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END CHANGE PWD MODAL -->
+    <!-- BEGIN SIGN-OUT MODAL -->
+    <div class="modal fade" id="signOutModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <h4>keep growing and trying... and remember to be kind to yourself!</h4>
+          <form id="sign-out">
+            <p id="sign-out-message"></p>
+            <input type="submit" class="btn btn-primary" value="sign out" data-toggle="modal" data-target="#signOutModal">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- END SIGN-OUT MODAL -->
+  </div>
+  <!-- END SIGNED-IN SCREEN -->
+</body>
+
 </html>
