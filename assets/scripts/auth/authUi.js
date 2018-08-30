@@ -23,7 +23,7 @@ const signInSuccess = function (data) {
     store.user = data.user
     // $('#logInModal').modal('hide')
     // $('#sign-in-modal').hide()
-    // $('#sign-up-modal').hide()
+    $('#landing-screen').hide()
     // $('#journal-entries-view').show()
     $('#logged-in-screen').show()
     // $('#change-password-modal').show()
@@ -42,7 +42,7 @@ const signOutSuccess = function () {
     console.log('signOutSuccess ran and nothing was returned!')
     store.user = null
     // $('#sign-in-modal').show()
-    // $('#sign-up-modal').show()
+    $('#landing-screen').show()
     // $('#journal-entries-view').hide()
     $('#logged-in-screen').hide()
     // $('#change-password-modal').hide()
