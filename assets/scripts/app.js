@@ -8,6 +8,7 @@ const authEvents = require('./auth/authEvents')
 // require('./example')
 
 $(() => {
+  $('#logged-in-screen').hide()
   authEvents.addHandlers()
   // journalEntryEvents.addHandlers()
 })
