@@ -68,11 +68,11 @@
       </section>
       <nav>
         <ul>
-          <li><a href="#">Write in Your Journal</a></li>
+          <li><a href="#today">Write in Your Journal</a></li>
           <!-- <li><a href="#">Note Your Progress</a></li> -->
           <!-- <li><a href="#">About the App</a></li> -->
-          <li data-toggle="modal" data-target="#signOutModal">leave technology behind</li>
-          <li data-toggle="modal" data-target="#changePasswordModal">settings</li>
+          <li><a data-toggle="modal" href="#signOutModal">leave technology behind</a></li>
+          <li><a data-toggle="modal" href="#changePasswordModal">settings</a></li>
         </ul>
       </nav>
     </header>
@@ -94,14 +94,15 @@
       </div>
     </section>
     <section class="all-entries">
-      <section class="daily-entry">
+      <section id="today" class="daily-entry">
         <article>
           <h2>August 23, 2018</h2>
-          <p>Trans and gender-nonconforming people face particular challenges. As a therapist I support clients
-            experiencing these challenges, but this is not really me wrting. This is River putting words in my mouth in
-            order to create content for River's capstone project, and is made up of bits of things relevant to River's
-            life before General Assembly, as well as run-on sentences, misssspellingssss, bad grammer, random words,
-            etc.</p>
+            <form id="todays-entry" class="border">
+              <div class="form">
+                <textarea form="todays-entry" name="journal-entry" placeholder="how are you feeling?"></textarea>
+                <input type="submit" class="long-button" value="save your journal entry">
+              </div>
+            </form>
         </article>
         <div class="col-md-5 mr-auto">
           <div>
@@ -136,26 +137,26 @@
           </div>
         </div>
       </section>
-      <section class="daily-entry"></section>
-      <article>
-        <h2>August 21, 2018</h2>
-        <p>"Estar" is also used in conjuction with the location of people, animals and things, but in this entry I'm
-          going to focus on states of being/mood. Estoy un poco cansado/a. I am a little tired. Estoy muy contento/a. I
-          am very happy. Aburrido/a bored, contento/a happy, nervioso/a nervous, frustrado/a frustrated. </p>
-      </article>
-      <div class="col-md-5 mr-auto">
-        <div>
-          <p>
-            <span class="progress-skill-title">Skill Goal: Listening</span>
-          </p>
-          <div class="progress status-today">
-            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0"
-              aria-valuemin="0" aria-valuemax="100">
+      <section class="daily-entry">
+        <article>
+          <h2>August 21, 2018</h2>
+          <p>"Estar" is also used in conjuction with the location of people, animals and things, but in this entry I'm
+            going to focus on states of being/mood. Estoy un poco cansado/a. I am a little tired. Estoy muy contento/a. I
+            am very happy. Aburrido/a bored, contento/a happy, nervioso/a nervous, frustrado/a frustrated. </p>
+        </article>
+        <div class="col-md-5 mr-auto">
+          <div>
+            <p>
+              <span class="progress-skill-title">Skill Goal: Listening</span>
+            </p>
+            <div class="progress status-today">
+              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
     </section>
 
     <!-- BEGIN CHANGE PWD MODAL -->
