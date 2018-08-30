@@ -14,46 +14,18 @@
     <body>
       <!-- BEGIN SIGN IN -->
       <div id="loginScreen" align="center">
-        <form id="sign-in">
+        <form class="accounts" id="sign-in">
           <h4 class="display-4">.Sign.In.</h4>
           <br>
           <div class="form-group">
-            <input type="email" name="credentials[email]" value="" class="form-control" id="logInEmail" aria-describedby="emailHelp"
-              placeholder="email">
-            <input type="password" name="credentials[password]" value="" class="form-control" id="logInPassword" placeholder="password">
+            <input type="email" name="credentials[email]" class="form-control" id="logInEmail" placeholder="email">
+            <input type="password" name="credentials[password]" class="form-control" id="logInPassword" placeholder="password">
             <input type="submit" value="submit" class="btn btn-primary">
           </div>
         </form>
         <input type="submit" value="create your account" class="btn btn-secondary" data-toggle="modal" data-target="#signUpModalCenter">
       </div>
       <!--END SIGN IN-->
-      <!-- BEGIN SIGN UP MODAL -->
-      <div class="modal fade" id="signUpModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">create your account</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form class="accounts" id="sign-up">
-                <div class="form-group">
-                  <input type="email" name="credentials[email]" class="form-control"  aria-describedby="emailHelp" placeholder="email">
-                  <br>
-                  <input type="password" name="credentials[password]" class="form-control" placeholder="password">
-                  <input type="password" name="credentials[password_confirmation]" placeholder="confirm password" class="form-control">
-                </div>
-            </div>
-            <div class="modal-footer">
-                <input type="submit" id="create-account-button" value="submit" class="btn btn-primary" data-toggle="modal" data-target="#signUpModalCenter">
-            </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!-- END SIGN UP MODAL -->
     
       <header>
         <!-- photo -->
@@ -66,8 +38,9 @@
         <nav>
           <ul>
             <li><a href="#">Write in Your Journal</a></li>
-            <li><a href="#">Note Your Progress</a></li>
-            <li><a href="#">About the App</a></li>
+            <!-- <li><a href="#">Note Your Progress</a></li> -->
+            <!-- <li><a href="#">About the App</a></li> -->
+            <li data-toggle="modal" data-target=".sign-out-modal">leave technology behind</li>
           </ul>
         </nav>
       </header>
@@ -128,7 +101,7 @@
             <p>"Estar" is also used in conjuction with the location of people, animals and things, but in this entry I'm going to focus on states of being/mood. Estoy un poco cansado/a. I am a little tired. Estoy muy contento/a. I am very happy. Aburrido/a bored, contento/a happy, nervioso/a nervous, frustrado/a frustrated. </p>
           </article>
           <div class="col-md-5 mr-auto">
-            <div >
+            <div>
               <p>
                 <span class="progress-skill-title">Skill Goal: Listening</span>
               </p>
@@ -140,5 +113,44 @@
           </div>
         </section>
       </section>
+
+       <!-- BEGIN SIGN UP MODAL -->
+       <div class="modal fade" id="signUpModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">create your account</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="accounts" id="sign-up">
+                  <div class="form-group">
+                    <input type="email" name="credentials[email]" class="form-control"  aria-describedby="emailHelp" placeholder="email">
+                    <br>
+                    <input type="password" name="credentials[password]" class="form-control" placeholder="password">
+                    <input type="password" name="credentials[password_confirmation]" placeholder="confirm password" class="form-control">
+                  </div>
+                <input type="submit" id="create-account-button" value="submit" class="btn btn-primary" data-toggle="modal" data-target="#signUpModalCenter">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- END SIGN UP MODAL -->
+      <!-- BEGIN SIGN-OUT MODAL -->
+      <div class="modal fade sign-out-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <h4>keep growing and trying... and remember to be kind to yourself!</h4>
+            <form id="sign-out">
+              <p id="sign-out-message"></p>
+              <input type="submit" class="btn btn-primary" value="sign out">
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- END SIGN-OUT MODAL -->
     </body>
 </html>
