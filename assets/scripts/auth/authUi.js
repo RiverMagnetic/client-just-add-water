@@ -36,23 +36,24 @@ const signInFailure = function () {
     // $('#message').css('background-color', 'red')
 }
 
-// const signOutSuccess = function () {
-//     $('#message').text('Signed out')
-//     // $('#message').css('background-color', 'green')
-//     // console.log('signOutSuccess ran and nothing was returned!')
-//     store.user = null
-//     $('#sign-in-modal').show()
-//     $('#sign-up-modal').show()
-//     $('#journal-entries-view').hide()
-//     $('#sign-out-modal').hide()
-//     $('#change-password-modal').hide()
-//     $('#signOutModal').modal('hide')
-// }
+const signOutSuccess = function () {
+    // $('#message').text('Signed out')
+    // $('#message').css('background-color', 'green')
+    console.log('signOutSuccess ran and nothing was returned!')
+    store.user = null
+    // $('#sign-in-modal').show()
+    // $('#sign-up-modal').show()
+    // $('#journal-entries-view').hide()
+    // $('#sign-out-modal').hide()
+    // $('#change-password-modal').hide()
+    // $('#signOutModal').modal('hide')
+}
 
-// const signOutFailure = function () {
+const signOutFailure = function () {
+    console.error('sign-out failed, but signOutFailure ran!')
 //     $('#message').text('Error on sign out')
 //     // $('#message').css('background-color', 'red')
-// }
+}
 
 // const changePasswordSuccess = function () {
 //     $('#message').text('Changed password successfully')
@@ -70,10 +71,10 @@ module.exports = {
     signUpSuccess,
     signUpFailure,
     signInSuccess,
-    signInFailure
+    signInFailure,
+    signOutSuccess,
+    signOutFailure
     // ,
-    // signOutSuccess,
-    // signOutFailure,
     // changePasswordSuccess,
     // changePasswordFailure
 }
