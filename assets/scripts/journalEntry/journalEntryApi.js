@@ -3,14 +3,14 @@
 const config = require('../config')
 const store = require('../store')
 
-// const getJournalEntries = function () {
-//     return $.ajax({
-//         url: config.apiUrl + '/journal_entries',
-//         headers: {
-//             Authorization: 'Token token=' + store.user.token
-//         },
-//     })
-// }
+const getJournalEntries = function () {
+    return $.ajax({
+        url: config.apiUrl + '/journal_entries',
+        headers: {
+            Authorization: 'Token token=' + store.user.token
+        },
+    })
+}
 
 // const deleteJournalEntry = (journalEntryId) => {
 //     return $.ajax({
@@ -52,7 +52,7 @@ const createJournalEntry = function (data) {
 }
 
 module.exports = {
-    // getJournalEntries,
+    getJournalEntries,
     // deleteJournalEntry,
     createJournalEntry
     // ,
