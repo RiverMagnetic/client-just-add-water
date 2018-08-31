@@ -1,6 +1,6 @@
 'use strict'
 const authEvents = require('./auth/authEvents')
-// const journalEntryEvents = require('./journal-entry/journalEntryEvents')
+const journalEntryEvents = require('./journalEntry/journalEntryEvents')
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -10,5 +10,5 @@ const authEvents = require('./auth/authEvents')
 $(() => {
   $('#logged-in-screen').hide()
   authEvents.addHandlers()
-  // journalEntryEvents.addHandlers()
+  journalEntryEvents.addHandlers()
 })
