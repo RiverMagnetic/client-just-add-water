@@ -45,7 +45,17 @@ const onCreateJournalEntry = function (event) {
   //   $('#update-journal-entry').trigger('reset')
   //   //  the native way to do this would be: document.querySelector('#update-journal-entry').reset()
 // }
-
+const onDeleteJournalEntry = (event) => {
+  console.log('hey,this is onDeleteJournalEntry')
+  event.preventDefault()
+  const journalEntryId = $(event.target).closest('section').attr('data-id')
+  journalEntryApi.deleteJournalEntry(journalEntryId)
+      // may need refactoring
+      // .then(journalEntryUi.onDeleteJournalEntrySuccess)
+      // .then(() => onClearJournalEntries(event))
+      // .then(() => onGetJournalEntries(event))
+      .catch(journalEntryUi.onError)
+}
   const addHandlers = () => {
     // Between the sets of single quotes,
     // add the HTML id, class, or element to attach an event to, and the event/s
@@ -55,6 +65,7 @@ const onCreateJournalEntry = function (event) {
     $('#get-journal-entries').on('click', onGetJournalEntries)
     $('#create-journal-entry').on('submit', onCreateJournalEntry)
     // $('#update-journal-entry').on('submit', onUpdateJournalEntry)
+    $('.previous-entries').on('click', 'button', onDeleteJournalEntry)
   }  
 
 module.exports = {
