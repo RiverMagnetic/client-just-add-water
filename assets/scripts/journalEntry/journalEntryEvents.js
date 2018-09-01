@@ -2,7 +2,15 @@
 
 const getFormFields = require('../../../lib/get-form-fields')
 const journalEntryApi = require('./journalEntryApi.js')
-// const journalEntryUi = require('./journalEntryUi.js')
+const journalEntryUi = require('./journalEntryUi.js')
+
+const onGetJournalEntries = (event) => {
+  event.preventDefault()
+  Promise.resolve(journalEntryUi.clearJournalEntries)
+      .then(journalEntryApi.getJournalEntries)
+      .then(journalEntryUi.getJournalEntriesSuccess)
+      .catch(journalEntryUi.onError)
+}
 
 const onCreateJournalEntry = function (event) {
     event.preventDefault()
