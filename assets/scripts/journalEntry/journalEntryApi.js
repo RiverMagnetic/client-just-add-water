@@ -12,15 +12,15 @@ const getJournalEntries = function () {
     })
 }
 
-// const deleteJournalEntry = (journalEntryId) => {
-//     return $.ajax({
-//         url: config.apiUrl + '/journal-entries/' + journalEntryId,
-//         method: 'DELETE',
-//         headers: {
-//             Authorization: 'Token token=' + store.user.token
-//         },
-//     })
-// }
+const deleteJournalEntry = (journalEntryId) => {
+    return $.ajax({
+        url: config.apiUrl + '/journal-entries/' + journalEntryId,
+        method: 'DELETE',
+        headers: {
+            Authorization: 'Token token=' + store.user.token
+        },
+    })
+}
 
 // const updateJournalEntry = function (data) {
 //     // console.log(data)
@@ -53,7 +53,7 @@ const createJournalEntry = function (data) {
 
 module.exports = {
     getJournalEntries,
-    // deleteJournalEntry,
+    deleteJournalEntry,
     createJournalEntry
     // ,
     // updateJournalEntry
