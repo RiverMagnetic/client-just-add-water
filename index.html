@@ -70,6 +70,8 @@
         <ul>
           <li><a href="#create-journal-entry">Write in Your Journal</a></li>
           <!-- <li><a href="#">Note Your Progress</a></li> -->
+          <li><input type="submit" id="get-journal-entries" value="View Your Progress">View Your Progress</input></li>
+            <!-- a href="#previous-entries" -->
           <!-- <li><a href="#">About the App</a></li> -->
           <li><a data-toggle="modal" href="#signOutModal">leave technology behind</a></li>
           <li><a data-toggle="modal" href="#changePasswordModal">settings</a></li>
@@ -94,7 +96,7 @@
       </div>
     </section>
     <section class="all-entries">
-      <section id="todays-entry" class="daily-entry">
+      <section id="todays-entry" class="entry">
         <article>
           <h2>August 23, 2018</h2>
             <form id="create-journal-entry" class="border">
@@ -117,27 +119,9 @@
           </div>
         </div>
       </section>
-      <section class="daily-entry">
-        <article>
-          <h2>August 22, 2018</h2>
-          <p>In my last entry I left out a mood: <em>triste</em> or "sad". I also metioned that "estar" is used in
-            conjuction with the location of people, animals and things. Let's expolre that a little. Al lado de next
-            to, a la derecha de to the right, a la izquierda de to the left.</p>
-        </article>
-        <div class="col-md-5 mr-auto">
-          <div>
-            <p>
-              <span class="progress-skill-title">Skill Goal: Listening</span>
-            </p>
-            <div class="progress status-today">
-              <div id="progress-bar-listening-2018-8-22" class="progress-bar progress-bar-info progress-bar-striped active"
-                role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-        </div>
+      <section id="previous-entries" class="previous-entries" class="entry">
       </section>
-      <section class="daily-entry">
+      <section class="entry">
         <article>
           <h2>August 21, 2018</h2>
           <p>"Estar" is also used in conjuction with the location of people, animals and things, but in this entry I'm
