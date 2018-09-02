@@ -1,6 +1,6 @@
 'use strict'
 const authEvents = require('./auth/authEvents')
-// const journalEntryEvents = require('./journal-entry/journalEntryEvents')
+const journalEntryEvents = require('./journalEntry/journalEntryEvents')
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -9,6 +9,16 @@ const authEvents = require('./auth/authEvents')
 
 $(() => {
   $('#logged-in-screen').hide()
+
+  // function to hold event handlers
+  // const addHandlers = () => {
+  //   $('#journal-entries-view').on('submit', function (event) {
+  //     event.preventDefault()
+  //   })
+  // }
+  // call the addHandlers function that was just defined
+  // addHandlers()
+
   authEvents.addHandlers()
-  // journalEntryEvents.addHandlers()
+  journalEntryEvents.addHandlers()
 })
