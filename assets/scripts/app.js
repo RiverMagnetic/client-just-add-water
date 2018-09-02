@@ -9,6 +9,16 @@ const journalEntryEvents = require('./journalEntry/journalEntryEvents')
 
 $(() => {
   $('#logged-in-screen').hide()
+
+  // function to hold event handlers
+  // const addHandlers = () => {
+  //   $('#journal-entries-view').on('submit', function (event) {
+  //     event.preventDefault()
+  //   })
+  // }
+  // call the addHandlers function that was just defined
+  // addHandlers()
+
   authEvents.addHandlers()
   journalEntryEvents.addHandlers()
 })
