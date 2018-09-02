@@ -1,23 +1,19 @@
 {{#each journal_entries as |journal_entry|}} {{log journal_entry}}
 
-<h2 data-id="{{journal_entry.id}}">{{journal_entry.created_at}}</h2>
+  <h2 data-id="{{journal_entry.id}}">{{journal_entry.created_at}}</h2>
+  <section data-id="{{journal_entry.id}}">
+    <div>
+      <p>{{#if journal_entry.journal_entry_content}} {{journal_entry.journal_entry_content}} {{else}} cannot save an empty entry {{/if}}</p>
+      <small>(this was entry number {{journal_entry.id}}.)</small>
+    </div>
+    <div>
+      <button type="button" class="entry-button" id="edit-journal-entry-button">edit</button>
+      <button type="submit" class="entry-button" id="erase-journal-entry-button">erase</button>
+    </div>
+  </section>
 
-<ul data-id="{{journal_entry.id}}">
-    <li><p>{{#if journal_entry.journal_entry_content}} {{journal_entry.journal_entry_content}} {{else}} cannot save an empty entry {{/if}}</p>
-    </li>
-    <br>
-    <li><small>(this was entry number {{journal_entry.id}}.)</small></li>
-    {{!-- <li>
-         <button type="submit">X</button>
-    </li> --}}
-</ul>
-{{!--         <article>
-          <h2>August 22, 2018</h2>
-          <p>In my last entry I left out a mood: <em>triste</em> or "sad". I also metioned that "estar" is used in
-            conjuction with the location of people, animals and things. Let's expolre that a little. Al lado de next
-            to, a la derecha de to the right, a la izquierda de to the left.</p>
-        </article>
-        <div class="col-md-5 mr-auto">
+{{/each}}
+          {{!-- <div class="col-md-5 mr-auto">
           <div>
             <p>
               <span class="progress-skill-title">Skill Goal: Listening</span>
@@ -29,4 +25,11 @@
             </div>
           </div>
         </div> --}}
-{{/each}}
+
+{{!--         <article>
+          <h2>August 22, 2018</h2>
+          <p>In my last entry I left out a mood: <em>triste</em> or "sad". I also metioned that "estar" is used in
+            conjuction with the location of people, animals and things. Let's expolre that a little. Al lado de next
+            to, a la derecha de to the right, a la izquierda de to the left.</p>
+        </article>  --}}
+
