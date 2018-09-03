@@ -4,6 +4,11 @@ const getFormFields = require('../../../lib/get-form-fields')
 const journalEntryApi = require('./journalEntryApi.js')
 const journalEntryUi = require('./journalEntryUi.js')
 
+const onClearJournalEntries = (event) => {
+  event.preventDefault()
+  journalEntryUi.clearJournalEntries()
+}
+
 const onGetJournalEntries = (event) => {
   event.preventDefault()
   Promise.resolve(journalEntryUi.clearJournalEntries)
@@ -52,7 +57,7 @@ const onDeleteJournalEntry = (event) => {
   journalEntryApi.deleteJournalEntry(journalEntryId)
       // may need refactoring
       // .then(journalEntryUi.onDeleteJournalEntrySuccess)
-      // .then(() => onClearJournalEntries(event))
+      .then(() => onClearJournalEntries(event))
       // .then(() => onGetJournalEntries(event))
       .catch(journalEntryUi.onError)
 }
