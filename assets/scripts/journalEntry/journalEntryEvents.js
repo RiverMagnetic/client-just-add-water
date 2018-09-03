@@ -58,7 +58,7 @@ const onDeleteJournalEntry = (event) => {
       // may need refactoring
       // .then(journalEntryUi.onDeleteJournalEntrySuccess)
       .then(() => onClearJournalEntries(event))
-      // .then(() => onGetJournalEntries(event))
+      .then(() => onGetJournalEntries(event))
       .catch(journalEntryUi.onError)
 }
   const addHandlers = () => {
