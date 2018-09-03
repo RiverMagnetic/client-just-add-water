@@ -4,9 +4,9 @@ const store = require('../store')
 
 const signUpSuccess = function () {
     console.log('Signed up successfully')
-    // $('#message').text('Signed up successfully')
+    $('#message').text('Come In!')
     // $('#message').css('background-color', 'green')
-    // $('#sign-up-modal').hide()
+    $('#sign-up-modal').hide()
 }
 
 const signUpFailure = function () {
