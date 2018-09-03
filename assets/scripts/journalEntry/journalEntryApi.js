@@ -14,7 +14,7 @@ const getJournalEntries = function () {
 
 const deleteJournalEntry = (journalEntryId) => {
     return $.ajax({
-        url: config.apiUrl + '/journal-entries/' + journalEntryId,
+        url: config.apiUrl + '/journal_entries/' + journalEntryId,
         method: 'DELETE',
         headers: {
             Authorization: 'Token token=' + store.user.token
