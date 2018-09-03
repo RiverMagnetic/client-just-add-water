@@ -11,9 +11,9 @@ const getJournalEntriesSuccess = (data) => {
     $('.previous-entries').append(showJournalEntriesHtml)
 }
 
-// const clearJournalEntries = () => {
-//     $('.content').empty()
-// }
+const clearJournalEntries = () => {
+    $('.previous-entries').empty()
+}
 
 const onCreateJournalEntrySuccess = function () {
     console.log('JournalEntry added!')
@@ -22,6 +22,7 @@ const onCreateJournalEntrySuccess = function () {
 }
 
 // const onDeleteJournalEntrySuccess = function () {
+    console.log(`JournalEntry deleted!`)
 //     $('#message').text(`JournalEntry deleted!`)
 //     $('#message').css('background-color', 'green')
 // }
@@ -40,7 +41,7 @@ const onError = function (error) {
 module.exports = {
     onCreateJournalEntrySuccess,
     getJournalEntriesSuccess,
-    // clearJournalEntries,
+    clearJournalEntries,
     // onDeleteJournalEntrySuccess,
     // onUpdateJournalEntrySuccess,
     onError
