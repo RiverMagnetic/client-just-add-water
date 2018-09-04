@@ -9,11 +9,11 @@ const onClearJournalEntries = (event) => {
   journalEntryUi.clearJournalEntries()
 }
 
-const onGetJournalEntries = (event) => {
+const onGetAllJournalEntries = (event) => {
   event.preventDefault()
   Promise.resolve(journalEntryUi.clearJournalEntries)
-      .then(journalEntryApi.getJournalEntries)
-      .then(journalEntryUi.getJournalEntriesSuccess)
+      .then(journalEntryApi.getAllJournalEntries)
+      .then(journalEntryUi.getAllJournalEntriesSuccess)
       .catch(journalEntryUi.onError)
 }
 
@@ -29,9 +29,9 @@ const onCreateJournalEntry = function (event) {
     $('#create-journal-entry').trigger('reset')
   }
 
-  // const onUpdateJournalEntry = function (event) {
-  //   event.preventDefault()
-  //   console.log('running onUpdateJournalEntry')
+  const onUpdateJournalEntry = function (event) {
+    event.preventDefault()
+    console.log('running onUpdateJournalEntry')
   //   const data = getFormFields(event.target)
   //   const journalEntry = data.journalEntry
   //   if (journalEntry.id.length !== 0) {
@@ -40,7 +40,7 @@ const onCreateJournalEntry = function (event) {
   //       journalEntryApi.updateJournalEntry(data)
   //           // .then(journalEntryUi.onUpdateJournalEntrySuccess)
   //           // .then(() => onClearJournalEntries(event))
-  //           // .then(() => onGetJournalEntries(event))
+  //           // .then(() => onGetAllJournalEntries(event))
   //           // .catch(journalEntryUi.onError)
   //   } else {
   //       // $('#message').html('Please provide an journalEntry id!')
@@ -48,8 +48,8 @@ const onCreateJournalEntry = function (event) {
   //       console.log('Please provide an journalEntry id!')
   //   }
   //   $('#update-journal-entry').trigger('reset')
-  //   //  the native way to do this would be: document.querySelector('#update-journal-entry').reset()
-// }
+    //  the native way to do this would be: document.querySelector('#update-journal-entry').reset()
+}
 const onDeleteJournalEntry = (event) => {
   console.log('hey,this is onDeleteJournalEntry')
   event.preventDefault()
@@ -58,7 +58,7 @@ const onDeleteJournalEntry = (event) => {
       // may need refactoring
       // .then(journalEntryUi.onDeleteJournalEntrySuccess)
       .then(() => onClearJournalEntries(event))
-      .then(() => onGetJournalEntries(event))
+      .then(() => onGetAllJournalEntries(event))
       .catch(journalEntryUi.onError)
 }
   const addHandlers = () => {
@@ -67,9 +67,10 @@ const onDeleteJournalEntry = (event) => {
 
     // optional: add a selector and/or data before the event/s:
  
-    $('#get-journal-entries').on('click', onGetJournalEntries)
+    $('#get-all-journal-entries').on('click', onGetAllJournalEntries)
     $('#create-journal-entry').on('submit', onCreateJournalEntry)
-    // $('#update-journal-entry').on('submit', onUpdateJournalEntry)
+    // $('.previous-entries').on('submit', onUpdateJournalEntry)
+    // $('.previous-entries').on('click', 'button', onJournalEntry)
     $('.previous-entries').on('click', 'button', onDeleteJournalEntry)
   }  
 
