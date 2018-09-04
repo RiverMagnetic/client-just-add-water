@@ -5,7 +5,7 @@
 // this line connects my js to my handlebars
 const showJournalEntriesTemplate = require('../templates/entry-listing.handlebars')
 
-const getJournalEntriesSuccess = (data) => {
+const getAllJournalEntriesSuccess = (data) => {
     // console.log(data)
     const showJournalEntriesHtml = showJournalEntriesTemplate({ journal_entries: data.journal_entries })
     $('.previous-entries').append(showJournalEntriesHtml)
@@ -40,7 +40,7 @@ const onError = function (error) {
 
 module.exports = {
     onCreateJournalEntrySuccess,
-    getJournalEntriesSuccess,
+    getAllJournalEntriesSuccess,
     clearJournalEntries,
     // onDeleteJournalEntrySuccess,
     // onUpdateJournalEntrySuccess,
