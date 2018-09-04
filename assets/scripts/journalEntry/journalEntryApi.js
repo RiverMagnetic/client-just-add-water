@@ -3,7 +3,7 @@
 const config = require('../config')
 const store = require('../store')
 
-const getJournalEntries = function () {
+const getAllJournalEntries = function () {
     return $.ajax({
         url: config.apiUrl + '/journal_entries',
         headers: {
@@ -52,7 +52,7 @@ const createJournalEntry = function (data) {
 }
 
 module.exports = {
-    getJournalEntries,
+    getAllJournalEntries,
     deleteJournalEntry,
     createJournalEntry
     // ,
