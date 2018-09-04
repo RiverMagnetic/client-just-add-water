@@ -24,6 +24,7 @@ const signInSuccess = function (data) {
     // $('#logInModal').modal('hide')
     // $('#sign-in-modal').hide()
     $('#landing-screen').hide()
+    $('#create-journal-entry').hide()
     // $('#journal-entries-view').show()
     $('#logged-in-screen').show()
     // $('#change-password-modal').show()
