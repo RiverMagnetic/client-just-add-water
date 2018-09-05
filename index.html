@@ -78,6 +78,9 @@
         </ul>
       </nav>
     </header>
+
+    
+    <!-- MOCK-UP for cumulative progress -->
     <section id="progress-list-overall" class="row">
       <div class="col-xs-12">
         <h2>Current Personal Status</h2>
@@ -95,18 +98,22 @@
         </div>
       </div>
     </section>
-    <section class="all-entries">
+    <!-- END MOCK-UP for cumulative progress -->
+
+
+    <section id="all-entries">
       <section id="todays-entry" class="entry">
+        <!-- CREATE JOURNAL ENTRY BEGINS -->
         <article>
-            <form id="create-journal-entry" class="border">
-              <h2>August 23, 2018</h2>
-              <div class="form">
+            <h2>August 23, 2018</h2>
+            <form id="create-journal-entry">
                 <textarea id="journal-entry" form="create-journal-entry" name="journal_entry[journal_entry_content]" placeholder="how are you feeling?"></textarea>
-                <input id="create-journal-entry-button" type="submit" class="long-button" value="save your journal entry">
-                <input id="update-journal-entry-button" type="submit" class="long-button" value="save your journal entry">
-              </div>
+                <button type="submit" id="create-journal-entry-button" class="long-button">save your new journal entry</button>
+                <button type="submit" id="update-journal-entry-button" class="long-button">save your edited journal entry</button>
             </form>
         </article>
+        <!-- END CREATE JOURNAL ENTRY -->
+        <!-- MOCK-UP for today's progress -->
         <div class="col-md-5 mr-auto">
           <div>
             <p>
@@ -119,9 +126,16 @@
             </div>
           </div>
         </div>
+        <!-- END MOCK-UP for today's progress -->
       </section>
-      <section id="previous-entries" class="previous-entries" class="entry">
-      </section>
+
+      <!-- on GET request, HANDLEBARS populates this area with all previous entries -->
+      <article>
+        <section id="previous-entries" class="previous-entries" class="entry">
+        </section>
+      </article> 
+      <!-- END HANDLEBARS popluation area -->
+      <!-- MOCK-UP for final look of all entries -->
       <section class="entry">
         <article>
           <h2>August 21, 2018</h2>
@@ -142,7 +156,9 @@
           </div>
         </div>
       </section>
+      <!-- END MOCK-UP for final look of all entries-->
     </section>
+
 
     <!-- BEGIN CHANGE PWD MODAL -->
     <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-hidden="true">
