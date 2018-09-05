@@ -12,13 +12,13 @@ $(() => {
   // $('todays-entry').hide()
 
   // function to hold event handlers
-  const addHandlers = () => {
-    $('#all-entries').on('submit', function (event) {
-      event.preventDefault()
-    })
-  }
+  // const addHandlers = () => {
+  //   $('#all-entries').on('submit', function (event) {
+  //     event.preventDefault()
+  //   })
+  // }
   // call the addHandlers function that was just defined
-  addHandlers()
+  // addHandlers()
 
   authEvents.addHandlers()
   journalEntryEvents.addHandlers()
