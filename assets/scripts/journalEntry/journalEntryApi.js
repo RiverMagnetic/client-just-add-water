@@ -13,6 +13,7 @@ const getAllJournalEntries = function () {
 }
 
 const deleteJournalEntry = (journalEntryId) => {
+    console.log(journalEntryId)
     return $.ajax({
         url: config.apiUrl + '/journal_entries/' + journalEntryId,
         method: 'DELETE',
