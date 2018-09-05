@@ -19,7 +19,7 @@ const onGetAllJournalEntries = (event) => {
       console.log('onGetAllJournalEntries')
 }
 
-// const showCreateJournalEntryForm = function (event) {
+// const showCreateJournalEntryForm = function () {
   
 //   $('#create-journal-entry').show()
 // }
@@ -30,7 +30,7 @@ const onCreateJournalEntry = function (event) {
   const data = getFormFields(event.target)
 //     // could put some input validation here
 //     // message the user if validation fails
-//     // journalEntryApi.createJournalEntry(data)
+    journalEntryApi.createJournalEntry(data)
 //       // .then(journalEntryUi.onCreateJournalEntrySuccess)
 //       // .then(() => $('#create-journal-entry-content').trigger('reset'))
 //       // .catch(journalEntryUi.onError)
