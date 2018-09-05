@@ -1,7 +1,10 @@
 {{#each journal_entries as |journal_entry|}} {{log journal_entry}}
 
-  <h2 data-id="{{journal_entry.id}}">{{journal_entry.created_at}}</h2>
-  <section data-id="{{journal_entry.id}}">
+  
+  <section data-journal-entry-id="{{journal_entry.id}}"
+    data-journal-entry-created-at="{{journal_entry.created_at}}"
+    data-journal-entry-content="{{journal_entry.journal_entry_content}}">
+    <h2>{{journal_entry.created_at}}</h2>
     <div>
       <p>{{#if journal_entry.journal_entry_content}} {{journal_entry.journal_entry_content}} {{else}} cannot save an empty entry {{/if}}</p>
       <small>(this was entry number {{journal_entry.id}}.)</small>
