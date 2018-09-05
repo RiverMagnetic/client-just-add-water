@@ -21,11 +21,11 @@ const onCreateJournalEntrySuccess = function () {
     // $('#message').css('background-color', 'green')
 }
 
-// const onDeleteJournalEntrySuccess = function () {
+const onDeleteJournalEntrySuccess = function () {
     console.log(`JournalEntry deleted!`)
 //     $('#message').text(`JournalEntry deleted!`)
 //     $('#message').css('background-color', 'green')
-// }
+}
 
 // const onUpdateJournalEntrySuccess = function () {
 //     $('#message').text(`JournalEntry updated!`)
@@ -42,7 +42,7 @@ module.exports = {
     onCreateJournalEntrySuccess,
     getAllJournalEntriesSuccess,
     clearJournalEntries,
-    // onDeleteJournalEntrySuccess,
+    onDeleteJournalEntrySuccess,
     // onUpdateJournalEntrySuccess,
     onError
 }
