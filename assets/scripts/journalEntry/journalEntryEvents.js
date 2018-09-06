@@ -27,15 +27,15 @@ const onGetAllJournalEntries = (event) => {
 const onCreateJournalEntry = function (event) {
   event.preventDefault()
   console.log('onCreateJournalEntry')
-  const data = getFormFields(event.target)
-//     // could put some input validation here
-//     // message the user if validation fails
-    journalEntryApi.createJournalEntry(data)
-//       // .then(journalEntryUi.onCreateJournalEntrySuccess)
-//       // .then(() => $('#create-journal-entry-content').trigger('reset'))
-//       // .catch(journalEntryUi.onError)
-//     // $('#create-journal-entry').trigger('reset')
-  }
+  const data = getFormFields(document.getElementById('create-journal-entry'))
+    // could put some input validation here
+    // message the user if validation fails
+  journalEntryApi.createJournalEntry(data)
+    .then(journalEntryUi.onCreateJournalEntrySuccess)
+    // .then(() => $('#create-journal-entry-content').trigger('reset'))
+    .catch(journalEntryUi.onError)
+  $('#create-journal-entry').trigger('reset')
+}
 
   const previousJournalEntry = (event) => {
     store.journal_entry = {
@@ -62,15 +62,15 @@ const onCreateJournalEntry = function (event) {
     console.log('fillWithPreviousJournalEntry ran.')
   }
 
-  // const onUpdateJournalEntry = function (event) {
-  //   event.preventDefault()
-  //   console.log('running onUpdateJournalEntry')
-  //   const data = getFormFields(event.target)
-  //   const journalEntry = data.journalEntry
+  const onUpdateJournalEntry = function (event) {
+    event.preventDefault()
+    console.log('running onUpdateJournalEntry')
+    const data = getFormFields(document.getElementById('create-journal-entry'))
+    // const journalEntry = data.journalEntry
   //   if (journalEntry.id.length !== 0) {
-  //       // console.log("the length of the journal entry id is", journalEntry.id.length)
-  //       // console.log("we're in onUpdateJournalEntry and the data is:", data)
-  //       journalEntryApi.updateJournalEntry(data)
+  // //       // console.log("the length of the journal entry id is", journalEntry.id.length)
+  // //       // console.log("we're in onUpdateJournalEntry and the data is:", data)
+        journalEntryApi.updateJournalEntry(data)
   //           // .then(journalEntryUi.onUpdateJournalEntrySuccess)
   //           // .then(() => onClearJournalEntries(event))
   //           // .then(() => onGetAllJournalEntries(event))
@@ -82,7 +82,7 @@ const onCreateJournalEntry = function (event) {
   //   }
   //   $('#update-journal-entry').trigger('reset')
     //  the native way to do this would be: document.querySelector('#update-journal-entry').reset()
-// }
+}
 const onDeleteJournalEntry = (event) => {
   console.log('hey,this is onDeleteJournalEntry')
   event.preventDefault()
@@ -103,9 +103,9 @@ const onDeleteJournalEntry = (event) => {
     // $('#show-create-journal-entry').on('click', showCreateJournalEntryForm)
     $('#get-all-journal-entries').on('click', onGetAllJournalEntries)
     // $('#get-all-journal-entries').on('click', console.log('onGetAllJournalEntries'))
-    // $('#create-journal-entry').on('submit', '#create-journal-entry-button', onCreateJournalEntry)
-    $('#create-journal-entry-button').on('submit', onCreateJournalEntry)
-    // // $('#update-journal-entry-button').on('submit', onUpdateJournalEntry)
+    $('#create-journal-entry-button').on('click', onCreateJournalEntry)
+    // $('#create-journal-entry').on('submit', onCreateJournalEntry)
+    $('#update-journal-entry-button').on('click', onUpdateJournalEntry)
     // $('#update-journal-entry-button').on('submit', console.log('onUpdateJournalEntry'))
     $('.previous-entries').on('click', '#edit-journal-entry-button', previousJournalEntry)
     $('.previous-entries').on('click', '#erase-journal-entry-button', onDeleteJournalEntry)
