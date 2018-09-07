@@ -69,9 +69,9 @@
       </section>
       <nav>
         <ul>
-          <li><a href="#create-journal-entry" id="show-create-journal-entry">Write in Your Journal</a></li>
+          <li><a href="#todays-entry" id="show-create-journal-entry">Write in Your Journal</a></li>
           <!-- <li><a href="#">Note Your Progress</a></li> -->
-          <li><a href="#previous-entries" id="get-all-journal-entries" value="View Your Progress">View Your Progress</a></li>
+          <li><a href="#previous-entries" id="get-all-journal-entries">View Your Progress</a></li>
           <!-- <li><a href="#">About the App</a></li> -->
           <li><a data-toggle="modal" href="#signOutModal">leave technology behind</a></li>
           <li><a data-toggle="modal" href="#changePasswordModal">settings</a></li>
@@ -105,16 +105,17 @@
       <section id="todays-entry" class="entry">
         <!-- CREATE/UPDATE JOURNAL ENTRY BEGINS -->
         <article>
-            <h2>August 23, 2018</h2>
-            <form id="create-journal-entry">
-                <textarea id="journal-entry" form="create-journal-entry" name="journal_entry[journal_entry_content]" placeholder="how are you feeling?"></textarea>
-                <button type="submit" id="create-journal-entry-button" class="long-button">save and close today's journal entry</button>
-                <button type="submit" id="update-journal-entry-button" class="long-button">save and close your edited journal entry</button>
-            </form>
+          <h2 id="date"></h2>
+          <form id="create-journal-entry">
+            <textarea id="journal-entry" form="create-journal-entry" name="journal_entry[journal_entry_content]" placeholder="how are you feeling?"></textarea>
+            <button type="submit" id="create-journal-entry-button" class="long-button">save and close today's journal entry</button>
+            <button type="submit" id="update-journal-entry-button" class="long-button">save and close your edited journal entry</button>
+          </form>
         </article>
         <!-- END CREATE JOURNAL ENTRY -->
+
         <!-- MOCK-UP for today's progress -->
-        <div class="col-md-5 mr-auto">
+        <!-- <div class="col-md-5 mr-auto">
           <div>
             <p>
               <span class="progress-skill-title">Skill Goal: Listening</span>
@@ -125,18 +126,19 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- END MOCK-UP for today's progress -->
       </section>
 
       <!-- on GET request, HANDLEBARS populates this area with all previous entries -->
-      <article>
-        <section id="previous-entries" class="previous-entries" class="entry">
+      <article class="entry">
+        <section id="previous-entries">
         </section>
       </article> 
       <!-- END HANDLEBARS popluation area -->
+
       <!-- MOCK-UP for final look of all entries -->
-      <section class="entry">
+      <!-- <section class="entry">
         <article>
           <h2>August 21, 2018</h2>
           <p>"Estar" is also used in conjuction with the location of people, animals and things, but in this entry I'm
@@ -155,8 +157,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- END MOCK-UP for final look of all entries-->
+
     </section>
 
 
