@@ -23,21 +23,19 @@ const deleteJournalEntry = (journalEntryId) => {
     })
 }
 
-// const updateJournalEntry = function (data) {
-//     // console.log(data)
-//     // console.log(data.journalEntry.id)
-//     // console.log(store.user.token)
-//     return $.ajax({
-
-//         url: config.apiUrl + '/journal_entries/' + data.journalEntry.id, 
-//         //did I format the middle pats of this right: data.journalEntry.id ?
-//         method: 'PATCH',
-//         headers: {
-//             Authorization: 'Token token=' + store.user.token
-//         },
-//         data
-//     })
-// }
+const updateJournalEntry = function (data, journalEntryId) {
+    // console.log('here is some data from PATCH', data)
+    // console.log("console logging data.journal_entry", data.journal_entry)
+    // console.log(store.user.token)
+    return $.ajax({
+        url: config.apiUrl + '/journal_entries/' + journalEntryId, 
+        method: 'PATCH',
+        headers: {
+            Authorization: 'Token token=' + store.user.token
+        },
+        data
+    })
+}
 
 const createJournalEntry = function (data) {
     console.log('running createJournalEntry and here is some data:', data)
@@ -55,7 +53,6 @@ const createJournalEntry = function (data) {
 module.exports = {
     getAllJournalEntries,
     deleteJournalEntry,
-    createJournalEntry
-    // ,
-    // updateJournalEntry
+    createJournalEntry,
+    updateJournalEntry
 }
