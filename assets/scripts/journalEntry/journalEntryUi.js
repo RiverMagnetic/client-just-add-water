@@ -8,11 +8,11 @@ const showJournalEntriesTemplate = require('../templates/entry-listing.handlebar
 const getAllJournalEntriesSuccess = (data) => {
     // console.log(data)
     const showJournalEntriesHtml = showJournalEntriesTemplate({ journal_entries: data.journal_entries })
-    $('.previous-entries').append(showJournalEntriesHtml)
+    $('#previous-entries').append(showJournalEntriesHtml)
 }
 
 const clearJournalEntries = () => {
-    $('.previous-entries').empty()
+    $('#previous-entries').empty()
 }
 
 const onCreateJournalEntrySuccess = function () {
