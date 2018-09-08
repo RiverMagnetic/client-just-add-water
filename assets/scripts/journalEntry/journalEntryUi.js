@@ -5,15 +5,15 @@
 // this line connects my js to my handlebars
 const showJournalEntriesTemplate = require('../templates/entry-listing.handlebars')
 
-const getJournalEntriesSuccess = (data) => {
+const getAllJournalEntriesSuccess = (data) => {
     // console.log(data)
     const showJournalEntriesHtml = showJournalEntriesTemplate({ journal_entries: data.journal_entries })
-    $('.previous-entries').append(showJournalEntriesHtml)
+    $('#previous-entries').append(showJournalEntriesHtml)
 }
 
-// const clearJournalEntries = () => {
-//     $('.content').empty()
-// }
+const clearJournalEntries = () => {
+    $('#previous-entries').empty()
+}
 
 const onCreateJournalEntrySuccess = function () {
     console.log('JournalEntry added!')
@@ -21,10 +21,11 @@ const onCreateJournalEntrySuccess = function () {
     // $('#message').css('background-color', 'green')
 }
 
-// const onDeleteJournalEntrySuccess = function () {
+const onDeleteJournalEntrySuccess = function () {
+    console.log(`JournalEntry deleted!`)
 //     $('#message').text(`JournalEntry deleted!`)
 //     $('#message').css('background-color', 'green')
-// }
+}
 
 // const onUpdateJournalEntrySuccess = function () {
 //     $('#message').text(`JournalEntry updated!`)
@@ -39,9 +40,9 @@ const onError = function (error) {
 
 module.exports = {
     onCreateJournalEntrySuccess,
-    getJournalEntriesSuccess,
-    // clearJournalEntries,
-    // onDeleteJournalEntrySuccess,
+    getAllJournalEntriesSuccess,
+    clearJournalEntries,
+    onDeleteJournalEntrySuccess,
     // onUpdateJournalEntrySuccess,
     onError
 }

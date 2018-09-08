@@ -4,9 +4,9 @@ const store = require('../store')
 
 const signUpSuccess = function () {
     console.log('Signed up successfully')
-    // $('#message').text('Signed up successfully')
+    $('#message').text('Come In!')
     // $('#message').css('background-color', 'green')
-    // $('#sign-up-modal').hide()
+    $('#sign-up-modal').hide()
 }
 
 const signUpFailure = function () {
@@ -24,6 +24,7 @@ const signInSuccess = function (data) {
     // $('#logInModal').modal('hide')
     // $('#sign-in-modal').hide()
     $('#landing-screen').hide()
+    // $('#create-journal-entry').hide()
     // $('#journal-entries-view').show()
     $('#logged-in-screen').show()
     // $('#change-password-modal').show()
@@ -37,11 +38,11 @@ const signInFailure = function () {
 }
 
 const signOutSuccess = function () {
-    // $('#message').text('Signed out')
+    $('#message').text('')
     // $('#message').css('background-color', 'green')
     console.log('signOutSuccess ran and nothing was returned!')
     store.user = null
-    // $('#sign-in-modal').show()
+    $('#sign-up-modal').show()
     $('#landing-screen').show()
     // $('#journal-entries-view').hide()
     $('#logged-in-screen').hide()

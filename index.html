@@ -16,7 +16,7 @@
 <body>
   <!-- BEGIN LANDING SCREEN -->
   <div id="landing-screen" align="center">
-    <form class="accounts" id="sign-in">
+    <form class="accounts" id="sign-in"> 
       <h4 class="display-4">.Sign.In.</h4>
       <br>
       <div class="form-group">
@@ -25,7 +25,8 @@
         <input type="submit" value="submit" class="btn btn-primary">
       </div>
     </form>
-    <input type="submit" value="create your account" class="btn btn-secondary" data-toggle="modal" data-target="#signUpModalCenter">
+    <h3 class="display-4" id="message"></h3>
+    <input id="sign-up-modal" type="submit" value="create your account" class="btn btn-secondary" data-toggle="modal" data-target="#signUpModalCenter">
   </div>
   <!--END LANDING SCREEN-->
   <!-- BEGIN SIGN UP MODAL -->
@@ -68,16 +69,18 @@
       </section>
       <nav>
         <ul>
-          <li><a href="#create-journal-entry">Write in Your Journal</a></li>
+          <li><a href="#todays-entry" id="show-create-journal-entry">Write in Your Journal</a></li>
           <!-- <li><a href="#">Note Your Progress</a></li> -->
-          <li><input type="submit" id="get-journal-entries" value="View Your Progress">View Your Progress</input></li>
-            <!-- a href="#previous-entries" -->
+          <li><a href="#previous-entries" id="get-all-journal-entries">View Your Progress</a></li>
           <!-- <li><a href="#">About the App</a></li> -->
           <li><a data-toggle="modal" href="#signOutModal">leave technology behind</a></li>
           <li><a data-toggle="modal" href="#changePasswordModal">settings</a></li>
         </ul>
       </nav>
     </header>
+
+    
+    <!-- MOCK-UP for cumulative progress -->
     <section id="progress-list-overall" class="row">
       <div class="col-xs-12">
         <h2>Current Personal Status</h2>
@@ -95,18 +98,24 @@
         </div>
       </div>
     </section>
-    <section class="all-entries">
+    <!-- END MOCK-UP for cumulative progress -->
+
+
+    <section id="all-entries">
       <section id="todays-entry" class="entry">
+        <!-- CREATE/UPDATE JOURNAL ENTRY BEGINS -->
         <article>
-          <h2>August 23, 2018</h2>
-            <form id="create-journal-entry" class="border">
-              <div class="form">
-                <textarea form="create-journal-entry" name="journal_entry[journal_entry_content]" placeholder="how are you feeling?"></textarea>
-                <input type="submit" class="long-button" value="save your journal entry">
-              </div>
-            </form>
+          <h2 id="date"></h2>
+          <form id="create-journal-entry">
+            <textarea id="journal-entry" form="create-journal-entry" name="journal_entry[journal_entry_content]" placeholder="how are you feeling?"></textarea>
+            <button type="submit" id="create-journal-entry-button" class="long-button">save and close today's journal entry</button>
+            <button type="submit" id="update-journal-entry-button" class="long-button">save and close your edited journal entry</button>
+          </form>
         </article>
-        <div class="col-md-5 mr-auto">
+        <!-- END CREATE JOURNAL ENTRY -->
+
+        <!-- MOCK-UP for today's progress -->
+        <!-- <div class="col-md-5 mr-auto">
           <div>
             <p>
               <span class="progress-skill-title">Skill Goal: Listening</span>
@@ -117,11 +126,19 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
+        <!-- END MOCK-UP for today's progress -->
       </section>
-      <section id="previous-entries" class="previous-entries" class="entry">
-      </section>
-      <section class="entry">
+
+      <!-- on GET request, HANDLEBARS populates this area with all previous entries -->
+      <article class="entry">
+        <section id="previous-entries">
+        </section>
+      </article> 
+      <!-- END HANDLEBARS popluation area -->
+
+      <!-- MOCK-UP for final look of all entries -->
+      <!-- <section class="entry">
         <article>
           <h2>August 21, 2018</h2>
           <p>"Estar" is also used in conjuction with the location of people, animals and things, but in this entry I'm
@@ -140,8 +157,11 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
+      <!-- END MOCK-UP for final look of all entries-->
+
     </section>
+
 
     <!-- BEGIN CHANGE PWD MODAL -->
     <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-hidden="true">
