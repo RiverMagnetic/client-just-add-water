@@ -4,9 +4,9 @@
 
 * [API Repo](https://github.com/RiverMagnetic/api-rails-just-add-water)
 
-* [API Live URL] (https://api-rails-just-add-water.herokuapp.com/)
+* [API Live URL](https://api-rails-just-add-water.herokuapp.com/)
 
-* [Trello] (https://trello.com/b/SyRpniLn)
+* [Trello](https://trello.com/b/SyRpniLn)
 
 
 ## Technologies Used
