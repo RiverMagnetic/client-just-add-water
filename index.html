@@ -167,12 +167,14 @@
     <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
-          <h4>Change your password</h4>
-          <form class="accounts" id="change-password">
-            <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
-            <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
-            <input type="submit" id="change-password-button" name="submit" class="btn btn-primary">
-          </form>
+          <div class="modal-body">
+            <h4>Change your password</h4>
+            <form class="accounts" id="change-password">
+              <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
+              <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
+              <input type="submit" id="change-password-button" name="submit" class="btn btn-primary">
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -181,17 +183,29 @@
     <div class="modal fade" id="signOutModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
-          <h4>keep growing and trying... and remember to be kind to yourself!</h4>
-          <form id="sign-out">
-            <p id="sign-out-message"></p>
-            <input type="submit" class="btn btn-primary" value="sign out" data-toggle="modal" data-target="#signOutModal">
-          </form>
+          <div class="modal-body">
+            <h4>keep growing and trying... and remember to be kind to yourself!</h4>
+            <br>
+            <form id="sign-out">
+              <!-- <p id="sign-out-message"></p> -->
+              <input type="submit" class="btn btn-primary" value="sign out" data-toggle="modal" data-target="#signOutModal">
+            </form>
+          </div>
         </div>
       </div>
     </div>
     <!-- END SIGN-OUT MODAL -->
   </div>
   <!-- END SIGNED-IN SCREEN -->
+  <!-- BEGIN ERROR MODAL-->
+  <div class="modal fade w-75" id="errorModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content modal-text">
+        <div class="modal-body bg-danger text-white">something went wrong<br><br>please try again</div>
+      </div>
+    </div>
+  </div>
+  <!-- END ERROR MODAL-->
 </body>
 
 </html>
