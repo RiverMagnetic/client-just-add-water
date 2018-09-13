@@ -14,6 +14,7 @@ const getAllJournalEntriesSuccess = (data) => {
 
 const clearJournalEntries = () => {
     $('#previous-entries').empty()
+    console.log("clearJournalEntries Ran")
 }
 
 const onCreateJournalEntrySuccess = function () {
