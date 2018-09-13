@@ -9,6 +9,7 @@ const getAllJournalEntriesSuccess = (data) => {
     // console.log(data)
     const showJournalEntriesHtml = showJournalEntriesTemplate({ journal_entries: data.journal_entries })
     $('#previous-entries').append(showJournalEntriesHtml)
+    $('#previous-entries').show()
 }
 
 const clearJournalEntries = () => {
@@ -30,7 +31,7 @@ const onDeleteJournalEntrySuccess = function () {
 // const onUpdateJournalEntrySuccess = function () {
 //     $('#message').text(`JournalEntry updated!`)
 //     $('#message').css('background-color', 'green')
-    
+    // $('#successModal').modal('toggle')
 // }
 
 // This failure function is for any errors, not tied to specific requests
