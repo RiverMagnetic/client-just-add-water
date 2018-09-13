@@ -30,3 +30,6 @@ This project uses HTML, CSS, Bootstrap, Handlebars, Javascript, jQuery, and AJAX
 My main priority is to get the UI in good shape throughout the app. 
 
 Additionally, I want to continue to work on the styling, both for the look of the mobile version and proper display for the desktop version.
+
+
+![Just Add Water](https://i.imgur.com/8zQyXlB.png)
