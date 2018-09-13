@@ -6,6 +6,7 @@ Currently users can sign up and create short journal entries. The app's resource
 
 In future iterations users will also be able to set goals and note their progress towards those goals.
 
+
 ## Links
 
 * [Deployed Client](https://rivermagnetic.github.io/client-just-add-water/)
@@ -16,7 +17,7 @@ In future iterations users will also be able to set goals and note their progres
 
 * [Wireframes](https://github.com/RiverMagnetic/client-just-add-water/blob/master/just-add-water-original-wireframes.jpg)
 
-* [Trello](https://trello.com/b/SyRpniLn)
+* [Trello Board, which includes User Stories](https://trello.com/b/SyRpniLn)
 
 
 ## Technologies Used
@@ -26,6 +27,9 @@ This project uses HTML, CSS, Bootstrap, Handlebars, Javascript, jQuery, and AJAX
 
 ## Problems I Plan to Solve in Future Iterations
 
-My main priorities are to add authentication and to make everything functional.
+My main priority is to get the UI in good shape throughout the app. 
 
 Additionally, I want to continue to work on the styling, both for the look of the mobile version and proper display for the desktop version.
+
+
+![Just Add Water](https://i.imgur.com/8zQyXlB.png)
