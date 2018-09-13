@@ -81,7 +81,7 @@
 
     
     <!-- MOCK-UP for cumulative progress -->
-    <section id="progress-list-overall" class="row">
+    <!-- <section id="progress-list-overall" class="row">
       <div class="col-xs-12">
         <h2>Current Personal Status</h2>
       </div>
@@ -97,7 +97,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- END MOCK-UP for cumulative progress -->
 
 
@@ -166,13 +166,13 @@
     <!-- BEGIN CHANGE PWD MODAL -->
     <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-sm">
-        <div class="modal-content">
+        <div class="modal-content modal-text">
           <div class="modal-body">
             <h4>Change your password</h4>
             <form class="accounts" id="change-password">
               <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
               <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
-              <input type="submit" id="change-password-button" name="submit" class="btn btn-primary">
+              <input type="submit" id="change-password-button" name="submit" class="btn btn-primary" data-toggle="modal" data-target="#changePasswordModal">
             </form>
           </div>
         </div>
@@ -197,6 +197,16 @@
     <!-- END SIGN-OUT MODAL -->
   </div>
   <!-- END SIGNED-IN SCREEN -->
+  <!-- BEGIN SUCCESS MODAL-->
+  <div class="modal fade w-75" id="successModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="alert alert-success alert-dismissible modal-text">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <h2>Success!</h2>
+        </div>
+    </div>
+  </div>
+  <!-- END SUCCESS MODAL-->
   <!-- BEGIN ERROR MODAL-->
   <div class="modal fade w-75" id="errorModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-sm">
