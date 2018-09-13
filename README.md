@@ -1,3 +1,11 @@
+## Just Add Water
+
+This single page application is a gentle personal growth app, built for mobile use.
+
+Currently users can sign up and create short journal entries. The app's resources are private to each user, so users can only create, read, update, and delete their own journal entries.
+
+In future iterations users will also be able to set goals and note their progress towards those goals.
+
 ## Links
 
 * [Deployed Client](https://rivermagnetic.github.io/client-just-add-water/)
@@ -5,6 +13,8 @@
 * [API Repo](https://github.com/RiverMagnetic/api-rails-just-add-water)
 
 * [API Live URL](https://api-rails-just-add-water.herokuapp.com/)
+
+* [Wireframes]()
 
 * [Trello](https://trello.com/b/SyRpniLn)
 
