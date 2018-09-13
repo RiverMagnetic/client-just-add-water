@@ -57,10 +57,9 @@ const signOutFailure = function () {
 }
 
 const changePasswordSuccess = function () {
-//     $('#message').text('Changed password successfully')
-//     // $('#message').css('background-color', 'green')
+    $('#change-password').trigger('reset')
+    $('#successModal').modal('toggle')
         console.log('changePasswordSuccess ran and nothing was returned!')
-//     $('#changePasswordModal').hide()
 }
 
 const changePasswordFailure = function () {
