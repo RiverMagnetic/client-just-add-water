@@ -23,7 +23,6 @@ const onSignUp = function (event) {
     authApi.signUp(data)
         .then(authUi.signUpSuccess)
         .catch(authUi.signUpFailure)
-    $('#sign-up').trigger('reset')
 }
 
 const onSignIn = function (event) {

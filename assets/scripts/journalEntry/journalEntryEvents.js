@@ -5,10 +5,6 @@ const journalEntryApi = require('./journalEntryApi.js')
 const journalEntryUi = require('./journalEntryUi.js')
 const store = require('../store')
 
-const onClearJournalEntries = (event) => {
-  event.preventDefault()
-  journalEntryUi.clearJournalEntries()
-}
 
 const onGetAllJournalEntries = (event) => {
   event.preventDefault()
@@ -17,6 +13,13 @@ const onGetAllJournalEntries = (event) => {
       .then(journalEntryUi.getAllJournalEntriesSuccess)
       .catch(journalEntryUi.onError)
       console.log('onGetAllJournalEntries')
+}
+
+const onClearJournalEntries = (event) => {
+  event.preventDefault()
+  console.log("running onClearJournalEntries")
+  journalEntryUi.clearJournalEntries()
+  
 }
 
 const showCreateJournalEntryForm = function () {
@@ -71,15 +74,9 @@ const onUpdateJournalEntry = function (event) {
   console.log('running onUpdateJournalEntry')
   const data = getFormFields(document.getElementById('create-journal-entry'))
       journalEntryApi.updateJournalEntry(data, store.journal_entry.id)
-//           // .then(journalEntryUi.onUpdateJournalEntrySuccess)
+           // .then(journalEntryUi.onUpdateJournalEntrySuccess)
           .then(() => onClearJournalEntries(event))
-          .then(() => onGetAllJournalEntries(event))
           .catch(journalEntryUi.onError)
-  // } else {
-//       // $('#message').html('Please provide an journalEntry id!')
-//       // $('#message').css('background-color', 'red')
-      // console.log('Please provide an journalEntry id!')
-  // }
   $('#create-journal-entry').trigger('reset')
   $('#create-journal-entry').hide()
   //  the native way to do this would be: document.querySelector('#update-journal-entry').reset()
@@ -107,8 +104,8 @@ const addHandlers = () => {
   // $('#create-journal-entry').on('submit', onCreateJournalEntry)
   $('#update-journal-entry-button').on('click', onUpdateJournalEntry)
   // $('#update-journal-entry-button').on('submit', console.log('onUpdateJournalEntry'))
-  $('#previous-entries').on('click', '#edit-journal-entry-button', previousJournalEntry)
-  $('#previous-entries').on('click', '#erase-journal-entry-button', onDeleteJournalEntry)
+  $('.previous-entries-class').on('click', '#edit-journal-entry-button', previousJournalEntry)
+  $('.previous-entries-class').on('click', '#erase-journal-entry-button', onDeleteJournalEntry)
 }  
 
 module.exports = {

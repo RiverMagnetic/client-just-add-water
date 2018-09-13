@@ -5,14 +5,14 @@ const store = require('../store')
 const signUpSuccess = function () {
     console.log('Signed up successfully')
     $('#message').text('Come In!')
-    // $('#message').css('background-color', 'green')
+    $('#sign-up').trigger('reset')
     $('#sign-up-modal').hide()
 }
 
 const signUpFailure = function () {
     console.error('sign-up failed, but signUpFailure ran!')
-//     $('#message').text('Incorrect email or password')
-//     $('#message').css('background-color', 'red')
+    $('#sign-up').trigger('reset')
+    $('#errorModal').modal('toggle')
 }
 
 const signInSuccess = function (data) {
@@ -57,10 +57,9 @@ const signOutFailure = function () {
 }
 
 const changePasswordSuccess = function () {
-//     $('#message').text('Changed password successfully')
-//     // $('#message').css('background-color', 'green')
+    $('#change-password').trigger('reset')
+    $('#successModal').modal('toggle')
         console.log('changePasswordSuccess ran and nothing was returned!')
-//     $('#changePasswordModal').hide()
 }
 
 const changePasswordFailure = function () {
