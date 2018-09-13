@@ -5,10 +5,6 @@ const journalEntryApi = require('./journalEntryApi.js')
 const journalEntryUi = require('./journalEntryUi.js')
 const store = require('../store')
 
-const onClearJournalEntries = (event) => {
-  event.preventDefault()
-  journalEntryUi.clearJournalEntries()
-}
 
 const onGetAllJournalEntries = (event) => {
   event.preventDefault()
@@ -17,6 +13,13 @@ const onGetAllJournalEntries = (event) => {
       .then(journalEntryUi.getAllJournalEntriesSuccess)
       .catch(journalEntryUi.onError)
       console.log('onGetAllJournalEntries')
+}
+
+const onClearJournalEntries = (event) => {
+  event.preventDefault()
+  console.log("running onClearJournalEntries")
+  journalEntryUi.clearJournalEntries()
+  
 }
 
 const showCreateJournalEntryForm = function () {
@@ -101,8 +104,8 @@ const addHandlers = () => {
   // $('#create-journal-entry').on('submit', onCreateJournalEntry)
   $('#update-journal-entry-button').on('click', onUpdateJournalEntry)
   // $('#update-journal-entry-button').on('submit', console.log('onUpdateJournalEntry'))
-  $('#previous-entries').on('click', '#edit-journal-entry-button', previousJournalEntry)
-  $('#previous-entries').on('click', '#erase-journal-entry-button', onDeleteJournalEntry)
+  $('.previous-entries-class').on('click', '#edit-journal-entry-button', previousJournalEntry)
+  $('.previous-entries-class').on('click', '#erase-journal-entry-button', onDeleteJournalEntry)
 }  
 
 module.exports = {
