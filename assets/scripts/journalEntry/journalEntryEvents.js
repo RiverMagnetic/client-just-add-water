@@ -71,15 +71,9 @@ const onUpdateJournalEntry = function (event) {
   console.log('running onUpdateJournalEntry')
   const data = getFormFields(document.getElementById('create-journal-entry'))
       journalEntryApi.updateJournalEntry(data, store.journal_entry.id)
-//           // .then(journalEntryUi.onUpdateJournalEntrySuccess)
+           // .then(journalEntryUi.onUpdateJournalEntrySuccess)
           .then(() => onClearJournalEntries(event))
-          .then(() => onGetAllJournalEntries(event))
           .catch(journalEntryUi.onError)
-  // } else {
-//       // $('#message').html('Please provide an journalEntry id!')
-//       // $('#message').css('background-color', 'red')
-      // console.log('Please provide an journalEntry id!')
-  // }
   $('#create-journal-entry').trigger('reset')
   $('#create-journal-entry').hide()
   //  the native way to do this would be: document.querySelector('#update-journal-entry').reset()
