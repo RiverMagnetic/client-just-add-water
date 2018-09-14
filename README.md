@@ -33,7 +33,7 @@ Going to the homepage and creating an account is all the set-up a general user n
 
 My main priority is to get the UI in good shape throughout the app. 
 
-Additionally, I want to continue to work on the styling, both for the look of the mobile version and proper display for the desktop version.
+Additionally, I want to make the created at dates for previous entries disply nicely and continue to work on the styling, both for the look of the mobile version and proper display for the desktop version.
 
 
 ![above the fold](https://i.imgur.com/OLgpSWX.png)
