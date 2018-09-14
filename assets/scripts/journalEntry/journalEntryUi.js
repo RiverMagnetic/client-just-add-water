@@ -37,7 +37,7 @@ const onDeleteJournalEntrySuccess = function () {
 
 // This failure function is for any errors, not tied to specific requests
 const onError = function (error) {
-    console.error('error is ', error)
+    $('#errorModal').modal('toggle')
 }
 
 module.exports = {
