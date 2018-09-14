@@ -32,4 +32,4 @@ My main priority is to get the UI in good shape throughout the app.
 Additionally, I want to continue to work on the styling, both for the look of the mobile version and proper display for the desktop version.
 
 
-![above the fold](https://i.imgur.com/OLgpSWX.png)  ![create journal entry form](https://i.imgur.com/j9GCRIK.png)
+![above the fold](https://i.imgur.com/OLgpSWX.png)
