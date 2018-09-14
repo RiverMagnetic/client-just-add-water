@@ -5,24 +5,15 @@ const store = require('../store')
 const signUpSuccess = function () {
     console.log('Signed up successfully')
     $('#message').text('Come In!')
-    $('#sign-up').trigger('reset')
     $('#sign-up-modal').hide()
 }
 
 const signUpFailure = function () {
-    console.error('sign-up failed, but signUpFailure ran!')
-    $('#sign-up').trigger('reset')
     $('#errorModal').modal('toggle')
 }
 
 const signInSuccess = function (data) {
-    console.log('Signed in successfully')
-    // $('#message').text("Welcome")
-    // $('#message').css('background-color', 'green')
-    // console.log('signInSuccess ran. Data is :', data)
     store.user = data.user
-    // $('#logInModal').modal('hide')
-    // $('#sign-in-modal').hide()
     $('#landing-screen').hide()
     // $('#create-journal-entry').hide()
     // $('#journal-entries-view').show()
@@ -31,10 +22,7 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function () {
-    // $('#logInModal').modal('hide')
-    // $('#message').text('Incorrect Email or Password')
-    console.error('sign-in failed, but signInFailure ran!')
-    // $('#message').css('background-color', 'red')
+    $('#errorModal').modal('toggle')
 }
 
 const signOutSuccess = function () {
