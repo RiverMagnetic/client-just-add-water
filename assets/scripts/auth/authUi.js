@@ -45,15 +45,11 @@ const signOutFailure = function () {
 }
 
 const changePasswordSuccess = function () {
-    $('#change-password').trigger('reset')
     $('#successModal').modal('toggle')
-        console.log('changePasswordSuccess ran and nothing was returned!')
 }
 
 const changePasswordFailure = function () {
-    console.error('change-password failed, but changePasswordFailure ran!')
-//     $('#message').text('Incorrect old or new password')
-//     // $('#message').css('background-color', 'red')
+    $('#errorModal').modal('toggle')
 }
 
 module.exports = {
