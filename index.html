@@ -199,7 +199,7 @@
   <!-- END SIGNED-IN SCREEN -->
   <!-- BEGIN SUCCESS MODAL-->
   <div class="modal fade w-75" id="successModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
+    <div class="modal-dialog modal-md">
         <div class="alert alert-success alert-dismissible modal-text">
           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
           <h2>Success!</h2>
@@ -209,9 +209,10 @@
   <!-- END SUCCESS MODAL-->
   <!-- BEGIN ERROR MODAL-->
   <div class="modal fade w-75" id="errorModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content modal-text">
-        <div class="modal-body bg-danger text-white">something went wrong<br><br>please try again</div>
+    <div class="modal-dialog modal-md">
+      <div class="alert alert-warning alert-dismissible modal-text">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <p>something went<br>wrong<br><br>please try again</p>
       </div>
     </div>
   </div>
