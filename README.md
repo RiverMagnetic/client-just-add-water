@@ -25,6 +25,10 @@ In future iterations users will also be able to set goals and note their progres
 This project uses HTML, CSS, Bootstrap, Handlebars, Javascript, jQuery, and AJAX. The backend is an API I built using Postgresql and Ruby on Rails.
 
 
+## Set Up and Installation Instructions
+Going to the homepage and creating an account is all the set-up a general user needs to do to use this app. If you want to tinker with the app on your own computer, install dependencies using npm install, and run locally using 'PORT=7165 npm start' in conjunction with running the back end.
+
+
 ## Problems I Plan to Solve in Future Iterations
 
 My main priority is to get the UI in good shape throughout the app. 
