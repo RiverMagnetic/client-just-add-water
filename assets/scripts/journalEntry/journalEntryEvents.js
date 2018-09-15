@@ -29,6 +29,7 @@ const showCreateJournalEntryForm = function () {
   $('#update-journal-entry-button').hide()
   $('#create-journal-entry').show()
   $('#create-journal-entry-button').show()
+  $('#previous-entries').hide()
 }
 
 const onCreateJournalEntry = function (event) {
