@@ -13,7 +13,7 @@ const getAllJournalEntries = function () {
 }
 
 const deleteJournalEntry = (journalEntryId) => {
-    console.log(journalEntryId)
+    // console.log(journalEntryId)
     return $.ajax({
         url: config.apiUrl + '/journal_entries/' + journalEntryId,
         method: 'DELETE',
@@ -38,8 +38,8 @@ const updateJournalEntry = function (data, journalEntryId) {
 }
 
 const createJournalEntry = function (data) {
-    console.log('running createJournalEntry and here is some data:', data)
-    console.log('running createJournalEntry and here is a user token', store.user.token)
+    // console.log('running createJournalEntry and here is some data:', data)
+    // console.log('running createJournalEntry and here is a user token', store.user.token)
     return $.ajax({
         url: config.apiUrl + '/journal_entries',
         method: 'POST',
