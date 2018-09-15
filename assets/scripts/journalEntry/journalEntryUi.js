@@ -7,9 +7,11 @@ const showJournalEntriesTemplate = require('../templates/entry-listing.handlebar
 
 const getAllJournalEntriesSuccess = (data) => {
     // console.log(data)
+    $('#previous-entries').empty()
     const showJournalEntriesHtml = showJournalEntriesTemplate({ journal_entries: data.journal_entries })
     $('#previous-entries').append(showJournalEntriesHtml)
     $('#previous-entries').show()
+
 }
 
 const clearJournalEntries = () => {
