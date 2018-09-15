@@ -14,24 +14,18 @@ const getAllJournalEntriesSuccess = (data) => {
 
 const clearJournalEntries = () => {
     $('#previous-entries').empty()
-    console.log("clearJournalEntries Ran")
+    // console.log("clearJournalEntries Ran")
 }
 
 const onCreateJournalEntrySuccess = function () {
-    console.log('JournalEntry added!')
-    // $('#message').text(`JournalEntry added!`)
-    // $('#message').css('background-color', 'green')
+    // console.log('JournalEntry added!')
 }
 
 const onDeleteJournalEntrySuccess = function () {
-    console.log(`JournalEntry deleted!`)
-//     $('#message').text(`JournalEntry deleted!`)
-//     $('#message').css('background-color', 'green')
+    // console.log(`JournalEntry deleted!`)
 }
 
 // const onUpdateJournalEntrySuccess = function () {
-//     $('#message').text(`JournalEntry updated!`)
-//     $('#message').css('background-color', 'green')
     // $('#successModal').modal('toggle')
 // }
 
