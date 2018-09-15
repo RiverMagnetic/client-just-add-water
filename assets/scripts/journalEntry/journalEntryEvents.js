@@ -12,12 +12,12 @@ const onGetAllJournalEntries = (event) => {
       .then(journalEntryApi.getAllJournalEntries)
       .then(journalEntryUi.getAllJournalEntriesSuccess)
       .catch(journalEntryUi.onError)
-      console.log('onGetAllJournalEntries')
+      // console.log('onGetAllJournalEntries')
 }
 
 const onClearJournalEntries = (event) => {
   event.preventDefault()
-  console.log("running onClearJournalEntries")
+  // console.log("running onClearJournalEntries")
   journalEntryUi.clearJournalEntries()
   
 }
@@ -33,7 +33,7 @@ const showCreateJournalEntryForm = function () {
 
 const onCreateJournalEntry = function (event) {
   event.preventDefault()
-  console.log('onCreateJournalEntry')
+  // console.log('onCreateJournalEntry')
   const data = getFormFields(document.getElementById('create-journal-entry'))
     // could put some input validation here
     // message the user if validation fails
@@ -50,41 +50,39 @@ const previousJournalEntry = (event) => {
     created_at: $(event.target).closest('section').attr('data-journal-entry-created-at'),
     journal_entry_content: $(event.target).closest('section').attr('data-journal-entry-content')
   }
-  console.log(store.journal_entry)
+  // console.log(store.journal_entry)
   $('#previous-entries').hide()
   fillWithPreviousJournalEntryContent()
-  console.log(store.journal_entry)
-  console.log('previousJournalEntry ran.')
+  // console.log(store.journal_entry)
+  // console.log('previousJournalEntry ran.')
 }
   
 // fillWithPreviousJournalEntryContent fills the textarea of the create-journal-entry form with the closest journal_entry_content on 'edit' button click
 const fillWithPreviousJournalEntryContent = () => {
   $('#journal-entry').val(store.journal_entry.journal_entry_content)
-  console.log('jounalentry content is', store.journal_entry.journal_entry_content)
-  // the following line is psuedocode for an idea for handling UI for this feature
-  //   $('#data-journal-entry-content').hide()
+  // console.log('jounalentry content is', store.journal_entry.journal_entry_content)
     $('#create-journal-entry').show()
     $('#create-journal-entry-button').hide()
     $('#update-journal-entry-button').show()
-  console.log('fillWithPreviousJournalEntryContent ran.')
+  // console.log('fillWithPreviousJournalEntryContent ran.')
 }
 
 const onUpdateJournalEntry = function (event) {
   event.preventDefault()
-  console.log('running onUpdateJournalEntry')
+  // console.log('running onUpdateJournalEntry')
   const data = getFormFields(document.getElementById('create-journal-entry'))
-      journalEntryApi.updateJournalEntry(data, store.journal_entry.id)
-           // .then(journalEntryUi.onUpdateJournalEntrySuccess)
-          .then(() => onClearJournalEntries(event))
-          .catch(journalEntryUi.onError)
+  journalEntryApi.updateJournalEntry(data, store.journal_entry.id)
+        // .then(journalEntryUi.onUpdateJournalEntrySuccess)
+      .then(() => onClearJournalEntries(event))
+      .catch(journalEntryUi.onError)
   $('#create-journal-entry').trigger('reset')
   $('#create-journal-entry').hide()
-  //  the native way to do this would be: document.querySelector('#update-journal-entry').reset()
+
 }
 const onDeleteJournalEntry = (event) => {
-  console.log('hey,this is onDeleteJournalEntry')
+  // console.log('hey,this is onDeleteJournalEntry')
   event.preventDefault()
-  console.log($(event.target))
+  // console.log($(event.target))
   const journalEntryId = $(event.target).closest('section').attr('data-journal-entry-id')
   journalEntryApi.deleteJournalEntry(journalEntryId)
       // may need refactoring
@@ -94,16 +92,11 @@ const onDeleteJournalEntry = (event) => {
       .catch(journalEntryUi.onError)
 }
 const addHandlers = () => {
-  // Between the sets of single quotes,
-  // add the HTML id, class, or element to attach an event to, and the event/s
-
-  // optional: add a selector and/or data before the event/s:
   $('#show-create-journal-entry').on('click', showCreateJournalEntryForm)
   $('#get-all-journal-entries').on('click', onGetAllJournalEntries)
   $('#create-journal-entry-button').on('click', onCreateJournalEntry)
   // $('#create-journal-entry').on('submit', onCreateJournalEntry)
   $('#update-journal-entry-button').on('click', onUpdateJournalEntry)
-  // $('#update-journal-entry-button').on('submit', console.log('onUpdateJournalEntry'))
   $('.previous-entries-class').on('click', '#edit-journal-entry-button', previousJournalEntry)
   $('.previous-entries-class').on('click', '#erase-journal-entry-button', onDeleteJournalEntry)
 }  
