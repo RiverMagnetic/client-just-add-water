@@ -1,21 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
 
-$yellow-green: #9AD33D;
+$olive: #9AD33D;
 $forest: #284C12;
 $olive: #537233;
 $sea-green: #C2DBB4;
 $sea-blue-green: #9AB7B3;
 
+
 body {
   color: #333;
   font-weight: 500;
   margin: 0 auto;
-  background: rgba(158, 218, 245, 0.05);
+  background: rgba($sea-blue-green, .05);
 }
 
 header {
-  color: rgba(200, 200, 250, 0.9);
-  text-shadow: -1px 0 rgba(0, 0, 0, 0.7), 0 1px rgba(0, 0, 0, 0.7), 1px 0 rgba(0, 0, 0, 0.7), 0 -1px rgba(0, 0, 0, 0.7);
+color: rgba(#537233, 0.9);
+// color: rgba($olive, 0.9);
+  // text-shadow: -1px 0 rgba(0, 0, 0, 0.7), 0 1px rgba(0, 0, 0, 0.7), 1px 0 rgba(0, 0, 0, 0.7), 0 -1px rgba(0, 0, 0, 0.7);
   text-align: center;
   font-family: 'Cardo', Georgia, "Times New Roman", serif;
   line-height: 2em;
@@ -50,26 +52,26 @@ h3 {
 }
 
 a {
-  color: rgba(200, 200, 250, 0.8);
+  color: rgba($olive, 0.8);
   text-decoration: none;
 }
 
 img {
   margin: 40px 0px 0px 0px;
-  border: 7px solid rgba(200, 200, 250, 0.9);
+  border: 7px solid rgba($olive, 0.9);
   border-radius: 8px;
 }
 
 ul {
   padding: 10px;
-  background: rgba(164, 243, 175, 0.173);
+background: rgba($sea-green, 0.173);
 }
 
 li {
   display: inline;
   padding: 4px 10px 4px 10px;
   margin: 5px;
-  border: 1px solid rgba(200, 200, 250, 0.9);
+  border: 1px solid rgba($olive, 0.9);
 }
 textarea {
   width: 100%;
@@ -82,7 +84,7 @@ textarea {
   resize: none;
 }
 // .form {
-//   border: 1px solid rgba(200, 200, 250, 0.9);
+//   border: 1px solid rgba($olive, 0.9);
 // }
 article {
   max-width: 500px;
@@ -102,9 +104,9 @@ p {
 .long-button {
   padding: 4px 10px 4px 10px;
   margin: 5px;
-  border: 1px solid rgba(200, 200, 250, 0.9);
-  color: rgba(200, 200, 250, 0.9);
-  text-shadow: -1px 0 rgba(0, 0, 0, 0.7), 0 1px rgba(0, 0, 0, 0.7), 1px 0 rgba(0, 0, 0, 0.7), 0 -1px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba($olive, 0.9);
+  color: $olive;
+  // text-shadow: -1px 0 rgba(0, 0, 0, 0.7), 0 1px rgba(0, 0, 0, 0.7), 1px 0 rgba(0, 0, 0, 0.7), 0 -1px rgba(0, 0, 0, 0.7);
   font-family: 'Cardo', Georgia, "Times New Roman", serif;
   line-height: 2em;
   cursor: pointer;
@@ -112,7 +114,7 @@ p {
 
 .entry {
   padding: 2px;
-  background: rgba(158, 218, 245, 0.173);
+  background: rgba($sea-blue-green, .173);
   margin-bottom: 2px;
 }
 
@@ -122,12 +124,12 @@ p {
 
 .entry-button {
   border-radius: 5px;
-  color: rgba(200, 200, 250, 0.9);
+  color: $olive;
   cursor: pointer;
   font-weight: 500;
   height: 20px;
   background-color: rgba(164, 243, 175, 0.173);
-  text-shadow: -1px 0 rgba(0, 0, 0, 0.7), 0 1px rgba(0, 0, 0, 0.7), 1px 0 rgba(0, 0, 0, 0.7), 0 -1px rgba(0, 0, 0, 0.7);
+  // text-shadow: -1px 0 rgba(0, 0, 0, 0.7), 0 1px rgba(0, 0, 0, 0.7), 1px 0 rgba(0, 0, 0, 0.7), 0 -1px rgba(0, 0, 0, 0.7);
 }
 
 #progress-bar-listening-2018-8-22 {
@@ -143,7 +145,7 @@ p {
 }
 
 #progress-list-overall {
-  background-color: rgba(200, 200, 250, 0.9);
+  background-color: $olive;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
