@@ -7,7 +7,7 @@ const store = require('../store')
 
 
 const onGetAllJournalEntries = (event) => {
-  event.preventDefault()
+  // event.preventDefault()
   Promise.resolve(journalEntryUi.clearJournalEntries)
       .then(journalEntryApi.getAllJournalEntries)
       .then(journalEntryUi.getAllJournalEntriesSuccess)
