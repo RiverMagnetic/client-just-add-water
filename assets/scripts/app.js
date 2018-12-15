@@ -9,7 +9,7 @@ const journalEntryEvents = require('./journalEntry/journalEntryEvents')
 
 $(() => {
   $('#logged-in-screen').hide()
-  $('#create-journal-entry').hide()
+  $('#todays-entry').hide()
 
   // function to hold event handlers
   // const addHandlers = () => {

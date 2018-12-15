@@ -27,7 +27,7 @@ const showCreateJournalEntryForm = function () {
   const months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
   document.getElementById("date").innerHTML = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`
   $('#update-journal-entry-button').hide()
-  $('#create-journal-entry').show()
+  $('#todays-entry').show()
   $('#create-journal-entry-button').show()
   $('#previous-entries').hide()
 }
@@ -42,7 +42,7 @@ const onCreateJournalEntry = function (event) {
     .then(journalEntryUi.onCreateJournalEntrySuccess)
     .catch(journalEntryUi.onError)
   $('#create-journal-entry').trigger('reset')
-  $('#create-journal-entry').hide()
+  $('#todays-entry').hide()
 }
 
 const previousJournalEntry = (event) => {
@@ -62,7 +62,7 @@ const previousJournalEntry = (event) => {
 const fillWithPreviousJournalEntryContent = () => {
   $('#journal-entry').val(store.journal_entry.journal_entry_content)
   // console.log('jounalentry content is', store.journal_entry.journal_entry_content)
-    $('#create-journal-entry').show()
+    $('#todays-entry').show()
     $('#create-journal-entry-button').hide()
     $('#update-journal-entry-button').show()
   // console.log('fillWithPreviousJournalEntryContent ran.')
@@ -77,7 +77,7 @@ const onUpdateJournalEntry = function (event) {
       .then(() => onClearJournalEntries(event))
       .catch(journalEntryUi.onError)
   $('#create-journal-entry').trigger('reset')
-  $('#create-journal-entry').hide()
+  $('#todays-entry').hide()
 
 }
 const onDeleteJournalEntry = (event) => {

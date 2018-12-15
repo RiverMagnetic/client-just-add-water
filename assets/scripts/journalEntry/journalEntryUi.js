@@ -11,7 +11,8 @@ const getAllJournalEntriesSuccess = (data) => {
     const showJournalEntriesHtml = showJournalEntriesTemplate({ journal_entries: data.journal_entries })
     $('#previous-entries').append(showJournalEntriesHtml)
     $('#previous-entries').show()
-
+    $('#todays-entry').hide()
+    // $('#create-journal-entry').hide()
 }
 
 const clearJournalEntries = () => {
