@@ -10,6 +10,14 @@ const getAllJournalEntriesSuccess = (data) => {
     $('#previous-entries').empty()
     const showJournalEntriesHtml = showJournalEntriesTemplate({ journal_entries: data.journal_entries })
     $('#previous-entries').append(showJournalEntriesHtml)
+
+    data.journal_entries.forEach(function (element) {
+        // element['created_at'] = new Date(element.created_at).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: '2-digit' })
+      const createdAt = new Date(element.created_at).toLocaleDateString('en-US', { day: '2-digit', month: '2-digit', year: '2-digit' })
+      console.log(`${createdAt}`)
+      document.getElementById("created-at").innerHTML = `${createdAt}`
+    })
+
     $('#previous-entries').show()
     $('#todays-entry').hide()
     // $('#create-journal-entry').hide()
