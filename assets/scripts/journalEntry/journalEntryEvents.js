@@ -5,7 +5,6 @@ const journalEntryApi = require('./journalEntryApi.js')
 const journalEntryUi = require('./journalEntryUi.js')
 const store = require('../store')
 
-
 const onGetAllJournalEntries = (event) => {
   // event.preventDefault()
   Promise.resolve(journalEntryUi.clearJournalEntries)
@@ -19,13 +18,12 @@ const onClearJournalEntries = (event) => {
   event.preventDefault()
   // console.log("running onClearJournalEntries")
   journalEntryUi.clearJournalEntries()
-
 }
 
 const showCreateJournalEntryForm = function () {
-  const d = new Date();
-  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-  document.getElementById("date").innerHTML = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`
+  const d = new Date()
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  document.getElementById('date').innerHTML = `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`
   $('#update-journal-entry-button').hide()
   $('#todays-entry').show()
   $('#create-journal-entry-button').show()
@@ -78,7 +76,6 @@ const onUpdateJournalEntry = function (event) {
     .catch(journalEntryUi.onError)
   $('#create-journal-entry').trigger('reset')
   $('#todays-entry').hide()
-
 }
 const onDeleteJournalEntry = (event) => {
   // console.log('hey,this is onDeleteJournalEntry')
