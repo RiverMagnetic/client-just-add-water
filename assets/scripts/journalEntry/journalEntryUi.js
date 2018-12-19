@@ -1,7 +1,7 @@
 'use strict'
 
 // const store = require('../store')
-
+const moment = require('moment');
 // this line connects my js to my handlebars
 const showJournalEntriesTemplate = require('../templates/entry-listing.handlebars')
 
@@ -9,11 +9,13 @@ const getAllJournalEntriesSuccess = (data) => {
   // console.log(data)
   $('#previous-entries').empty()
   data.journal_entries.forEach(function (entry) {
-    entry.created_at = new Date(entry.created_at).toLocaleDateString('en-US', {
-      day: '2-digit',
-      month: '2-digit',
-      year: '2-digit'
-    })
+    entry.created_at = moment(entry.created_at).format('MMM Do YYYY, h:mm a');
+    // new Date(entry.created_at).toLocaleDateString('en-US', {
+    //   day: '2-digit',
+    //   month: '2-digit',
+    //   year: '2-digit'
+    // }
+    // )
   })
   const showJournalEntriesHtml = showJournalEntriesTemplate({
     journal_entries: data.journal_entries
