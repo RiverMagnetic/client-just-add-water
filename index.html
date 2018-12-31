@@ -167,12 +167,16 @@
     <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-sm">
         <div class="modal-content modal-text">
+          <div>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
           <div class="modal-body">
             <h4>Change your password</h4>
             <form class="accounts" id="change-password">
               <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
               <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
-              <input type="submit" id="change-password-button" name="submit" class="btn btn-primary" data-toggle="modal" data-target="#changePasswordModal">
+              <input type="submit" id="change-password-button" name="submit" class="btn btn-primary" data-toggle="modal"
+                data-target="#changePasswordModal">
             </form>
           </div>
         </div>
