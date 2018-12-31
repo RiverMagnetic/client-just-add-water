@@ -9,7 +9,7 @@ const getAllJournalEntriesSuccess = (data) => {
   // console.log(data)
   $('#previous-entries').empty()
   data.journal_entries.forEach(function (entry) {
-    entry.created_at = moment(entry.created_at).format('MMM Do YYYY _ _ _ h:mm a');
+    entry.created_at = moment(entry.created_at).format('MMM Do YYYY -- h:mm a');
     // new Date(entry.created_at).toLocaleDateString('en-US', {
     //   day: '2-digit',
     //   month: '2-digit',
