@@ -2,11 +2,11 @@
 
   <section data-journal-entry-id="{{journal_entry.id}}"
     data-journal-entry-created-at="{{journal_entry.created_at}}"
-    data-journal-entry-content="{{journal_entry.journal_entry_content}}">
-    <h2 id="created-at">{{journal_entry.created_at}}</h2>
+    data-journal-entry-content="{{journal_entry.journal_entry_content}}" class="journal-entry-section">
+    <h2 class="created-at">{{journal_entry.created_at}}</h2>
     <div>
       <p>{{#if journal_entry.journal_entry_content}} {{journal_entry.journal_entry_content}} {{else}} cannot save an empty entry {{/if}}</p>
-      <small>(this was entry number {{journal_entry.id}}.)</small>
+      {{!-- <small>(this was entry number {{journal_entry.id}}.)</small> --}}
     </div>
     <div>
       <button type="button" class="entry-button" id="edit-journal-entry-button"><a href="#create-journal-entry">edit</a></button>

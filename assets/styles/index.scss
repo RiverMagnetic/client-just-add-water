@@ -15,6 +15,7 @@ body {
   border: 18px solid rgba(0, 0, 0, 0.804);
   border-radius: 15px;
   min-height: 823px;
+  text-align: center;
 }
 
 header {
@@ -69,6 +70,7 @@ img {
 ul {
   padding: 10px;
   background: rgba($sea-green, 0.173);
+  margin-bottom: 0;
 }
 
 li {
@@ -106,6 +108,7 @@ p {
   color: #666;
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.7em;
+  margin-top: 1rem;
 }
 
 .long-button {
@@ -120,8 +123,17 @@ p {
   cursor: pointer;
 }
 
+.journal-entry-section {
+  border-bottom: 1px solid rgba($olive, 1);
+  padding: 20px 0;
+}
+
+// .created-at {
+
+// }
+
 .entry {
-  padding: 2px;
+  padding: 2px 3px;
   background: rgba($sea-blue-green, .173);
   margin-bottom: 2px;
 }
