@@ -98,7 +98,7 @@ li {
 
 textarea {
   width: 100%;
-  height: 455px;
+  height: 388px;
   padding: 12px 20px;
   box-sizing: border-box;
   border: none;
@@ -119,6 +119,10 @@ article {
   word-wrap: break-word;
 }
 
+.todays-entry {
+  padding: 8px 20px;
+}
+
 p {
   font-size: 100%;
   color: #666;
@@ -130,7 +134,7 @@ p {
 .long-button {
   display: block;
   padding: 4px 10px 4px 10px;
-  margin: 5px;
+  margin: 5px auto;
   border: 1px solid rgba($olive, 1);
   // color: $olive;
   // text-shadow: -1px 0 rgba(0, 0, 0, 0.7), 0 1px rgba(0, 0, 0, 0.7), 1px 0 rgba(0, 0, 0, 0.7), 0 -1px rgba(0, 0, 0, 0.7);
