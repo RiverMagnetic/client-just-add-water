@@ -24,6 +24,10 @@ body {
   }
 }
 
+h4 {
+line-height: 38px;
+}
+
 .display-4 {
   margin-top: 38px;
 }
@@ -39,6 +43,11 @@ header {
 
 .modal {
   top: 30%;
+}
+
+.modal-dialog {
+  max-width: 378px;
+  margin: 0 auto;
 }
 
 button.close {
