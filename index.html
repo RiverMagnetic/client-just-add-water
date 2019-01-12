@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Just Add Water</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <!-- BEGIN LANDING SCREEN -->
+  <div id="landing-screen" align="center">
+    <form class="accounts" id="sign-in">
+      <h4 class="display-4">.Sign.In.</h4>
+      <br>
+      <div class="form-group">
+        <input type="email" name="credentials[email]" class="form-control" id="logInEmail" placeholder="email">
+        <input type="password" name="credentials[password]" class="form-control" id="logInPassword" placeholder="password">
+        <input type="submit" value="submit" class="btn btn-primary">
+      </div>
+    </form>
+    <input id="sign-up-modal" type="submit" value="create your account" class="btn btn-secondary" data-toggle="modal" data-target="#signUpModalCenter">
+  </div>
+  <!--END LANDING SCREEN-->
+  <!-- BEGIN SIGN UP MODAL -->
+  <div class="modal fade" id="signUpModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">create your account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="accounts" id="sign-up">
+            <div class="form-group">
+              <input type="email" name="credentials[email]" class="form-control" aria-describedby="emailHelp"
+                placeholder="email">
+              <br>
+              <input type="password" name="credentials[password]" class="form-control" placeholder="password">
+              <input type="password" name="credentials[password_confirmation]" placeholder="confirm password" class="form-control">
+            </div>
+            <input type="submit" id="create-account-button" value="submit" class="btn btn-primary" data-toggle="modal"
+              data-target="#signUpModalCenter">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END SIGN UP MODAL -->
+
+  <!-- BEGIN LOGGED-IN SCREEN -->
+  <div id="logged-in-screen">
+    <header>
+      <!-- photo -->
+      <img src="https://i.imgur.com/pYsXwJ0.jpg?1">
+      <section>
+        <h1>Just Add Water</h1>
+        <h2>(and maybe a little sunshine)</h2>
+        <h3></h3>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="#todays-entry" id="show-create-journal-entry">Write in Your Journal</a></li>
+          <!-- <li><a href="#">Note Your Progress</a></li> -->
+          <li><a href="#previous-entries" id="get-all-journal-entries">View Your Progress</a></li>
+          <!-- <li><a href="#">About the App</a></li> -->
+          <li><a data-toggle="modal" href="#signOutModal">leave technology behind</a></li>
+          <li><a data-toggle="modal" href="#changePasswordModal">settings</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <!-- MOCK-UP for cumulative progress -->
+    <!-- <section id="progress-list-overall" class="row">
+      <div class="col-xs-12">
+        <h2>Current Personal Status</h2>
+      </div>
+      <div class="col-xs-5 mr-auto">
+        <div>
+          <p>
+            <span class="progress-skill-title">Skill Goal: Listening</span>
+          </p>
+          <div class="progress">
+            <div id="progress-bar-overall-listening" class="progress-bar progress-bar-info progress-bar-striped active"
+              role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- END MOCK-UP for cumulative progress -->
+
+
+    <section id="all-entries">
+      <section id="todays-entry" class="entry">
+        <!-- CREATE/UPDATE JOURNAL ENTRY BEGINS -->
+        <article class="todays-entry">
+          <h2 id="date"></h2>
+          <form id="create-journal-entry">
+            <textarea id="journal-entry" form="create-journal-entry" name="journal_entry[journal_entry_content]" placeholder="how are you feeling?"></textarea>
+            <button type="submit" id="create-journal-entry-button" class="long-button">save and close today's entry</button>
+            <button type="submit" id="update-journal-entry-button" class="long-button">save and close your edited entry</button>
+          </form>
+        </article>
+        <!-- END CREATE/UPDATE JOURNAL ENTRY -->
+
+        <!-- MOCK-UP for today's progress -->
+        <!-- <div class="col-md-5 mr-auto">
+          <div>
+            <p>
+              <span class="progress-skill-title">Skill Goal: Listening</span>
+            </p>
+            <div class="progress status-today">
+              <div id="progress-bar-listening-2018-8-23" class="progress-bar progress-bar-info progress-bar-striped active"
+                role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- END MOCK-UP for today's progress -->
+      </section>
+
+      <!-- on GET request, HANDLEBARS populates this area with all previous entries -->
+      <article class="entry">
+        <section id="previous-entries" class="previous-entries-class">
+        </section>
+      </article>
+      <!-- END HANDLEBARS popluation area -->
+
+      <!-- MOCK-UP for final look of all entries -->
+      <!-- <section class="entry">
+        <article>
+          <h2>August 21, 2018</h2>
+          <p>"Estar" is also used in conjuction with the location of people, animals and things, but in this entry I'm
+            going to focus on states of being/mood. Estoy un poco cansado/a. I am a little tired. Estoy muy contento/a. I
+            am very happy. Aburrido/a bored, contento/a happy, nervioso/a nervous, frustrado/a frustrated. </p>
+        </article>
+        <div class="col-md-5 mr-auto">
+          <div>
+            <p>
+              <span class="progress-skill-title">Skill Goal: Listening</span>
+            </p>
+            <div class="progress status-today">
+              <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="0"
+                aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- END MOCK-UP for final look of all entries-->
+
+    </section>
+
+
+    <!-- BEGIN CHANGE PWD MODAL -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content modal-text">
+          <div>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <h4>Change your password</h4>
+            <form class="accounts" id="change-password">
+              <input type="password" name="passwords[old]" placeholder="Current Password" class="form-control">
+              <input type="password" name="passwords[new]" placeholder="New Password" class="form-control">
+              <input type="submit" id="change-password-button" name="submit" class="btn btn-primary" data-toggle="modal"
+                data-target="#changePasswordModal">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END CHANGE PWD MODAL -->
+    <!-- BEGIN SIGN-OUT MODAL -->
+    <div class="modal fade" id="signOutModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <h4>keep growing and trying...<br>and remember to be kind to yourself!</h4>
+            <br>
+            <form id="sign-out">
+              <!-- <p id="sign-out-message"></p> -->
+              <input type="submit" class="btn btn-primary" value="sign out" data-toggle="modal" data-target="#signOutModal">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END SIGN-OUT MODAL -->
+  </div>
+  <!-- END SIGNED-IN SCREEN -->
+  <!-- BEGIN SUCCESS MODAL-->
+  <div class="modal fade w-75" id="successModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="alert alert-success alert-dismissible modal-text">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <h2>Success!</h2>
+      </div>
+    </div>
+  </div>
+  <!-- END SUCCESS MODAL-->
+  <!-- BEGIN ERROR MODAL-->
+  <div class="modal fade w-75" id="errorModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="alert alert-warning alert-dismissible modal-text">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <p>something went<br>wrong<br><br>please try again</p>
+      </div>
+    </div>
+  </div>
+  <!-- END ERROR MODAL-->
+</body>
+
+</html>
